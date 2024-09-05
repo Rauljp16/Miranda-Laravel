@@ -22,13 +22,18 @@ class ActivityController extends Controller
      */
     public function store(Request $request)
     {
-
-        $activity = Activity::create([
-            'type' => $request->type,
-            'description' => $request->description,
-            'date' => $request->datetime,
-            'user_id' => Auth::id(), 
+        dd($request->all());
+        
+        $validatedData = $request->validate([
+            'type' => 'required|in:surf,windsurf,kayak,atv,hot air balloon',
+            'user_id' => 'required|exists:users,id',
+            'date' => 'required|date',
+            'paid' => 'boolean',
+            'notes' => 'nullable|string',
+            'satisfaction' => 'nullable|integer|min:1|max:5',
         ]);
+
+        $activity = Activity::create($validatedData);
 
         return response()->json(['activity' => $activity], 201);
     }

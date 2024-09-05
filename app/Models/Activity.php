@@ -12,9 +12,11 @@ class Activity extends Model
 
     protected $fillable = [
         'type',
-        'description',
-        'date',
         'user_id',
+        'date',
+        'paid',
+        'notes',
+        'satisfaction',
     ];
     
     public function post() : BelongsTo

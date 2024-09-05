@@ -13,10 +13,12 @@ return new class extends Migration
     {
         Schema::create('activities', function (Blueprint $table) {
             $table->id();
-
+    
             $table->enum('type', ['surf', 'windsurf', 'kayak', 'atv', 'hot air balloon']);
             
-            $table->foreign('user_id')->references('id')->on('users');
+            $table->unsignedBigInteger('user_id'); 
+            
+            $table->foreign('user_id')->references('id')->on('users'); 
             
             $table->dateTime('date');
             
@@ -25,7 +27,7 @@ return new class extends Migration
             $table->text('notes')->nullable();
             
             $table->unsignedTinyInteger('satisfaction')->nullable();
-
+    
             $table->timestamps();
         });
     }
