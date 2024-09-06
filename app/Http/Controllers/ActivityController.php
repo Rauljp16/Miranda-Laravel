@@ -22,22 +22,23 @@ class ActivityController extends Controller
      */
     public function store(Request $request)
     {
-        dd($request->all());
         
         $validatedData = $request->validate([
-            'type' => 'required|in:surf,windsurf,kayak,atv,hot air balloon',
-            'user_id' => 'required|exists:users,id',
-            'date' => 'required|date',
-            'paid' => 'boolean',
-            'notes' => 'nullable|string',
-            'satisfaction' => 'nullable|integer|min:1|max:5',
+        'type' => 'required|in:surf,windsurf,kayak,atv,hot air balloon',
+        'user_id' => 'required|exists:users,id',
+        'date' => 'required|date',
+        'paid' => 'boolean',
+        'notes' => 'nullable|string',
+        'satisfaction' => 'nullable|integer|min:1|max:5',
         ]);
-
+    
+        
         $activity = Activity::create($validatedData);
-
-        return response()->json(['activity' => $activity], 201);
+    
+        
+        return response()->json($activity, 201);
     }
-
+    
     /**
      * Display the specified resource.
      */

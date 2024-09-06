@@ -11,15 +11,10 @@ class Activity extends Model
     use HasFactory;
 
     protected $fillable = [
-        'type',
-        'user_id',
-        'date',
-        'paid',
-        'notes',
-        'satisfaction',
+        'type', 'user_id', 'date', 'paid', 'notes', 'satisfaction'
     ];
     
-    public function post() : BelongsTo
+    public function user() : BelongsTo
     {
         return $this->BelongTo(User::class);
     }
