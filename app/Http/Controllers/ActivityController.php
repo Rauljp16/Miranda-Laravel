@@ -42,16 +42,9 @@ class ActivityController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(Activity $activity)
     {
         
-        $activity = Activity::find($id);
-
-       
-        if (!$activity) {
-            return response()->json(['message' => 'Activity not found'], 404);
-        }
-
         return response()->json(['activity' => $activity]);
     }
 
@@ -61,13 +54,7 @@ class ActivityController extends Controller
     public function update(Request $request, string $id)
     {
         
-        $activity = Activity::find($id);
-
-        
-        if (!$activity) {
-            return response()->json(['message' => 'Activity not found'], 404);
-        }
-
+        $activity = Activity::findOrFail($id);
         
         $activity->update($request->all());
 
@@ -80,14 +67,8 @@ class ActivityController extends Controller
     public function destroy(string $id)
     {
         
-        $activity = Activity::find($id);
+        $activity = Activity::destroy($id);
 
-        
-        if (!$activity) {
-            return response()->json(['message' => 'Activity not found'], 404);
-        }
-
-        $activity->delete();
 
         return response()->json(['message' => 'Activity deleted successfully']);
     }
