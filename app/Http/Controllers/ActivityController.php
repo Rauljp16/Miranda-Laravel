@@ -8,18 +8,21 @@ use Illuminate\Support\Facades\Auth;
 
 class ActivityController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
+
     public function index()
     {
         $activities = Activity::all();
-        return response()->json(["activities" => $activities]);
+        
+        return view("activities.index", ["activities" => $activities, "user_id" => Auth::id()]);
+        //return response()->json(["activities" => $activities]);
+        
+    }
+ 
+    public function create()
+    {
+        return view('activities.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
     public function store(Request $request)
     {
         
@@ -35,22 +38,21 @@ class ActivityController extends Controller
         
         $activity = Activity::create($validatedData);
     
-        
-        return response()->json($activity, 201);
+        return view("activities.show", ["activity" => $activity]);
+        //return response()->json($activity, 201);
     }
     
-    /**
-     * Display the specified resource.
-     */
     public function show(Activity $activity)
     {
-        
-        return response()->json(['activity' => $activity]);
+        return view("activities.show", compact("activity"));
+        //return response()->json(['activity' => $activity]);
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
+    public function edit(string $id)
+    {
+        //
+    }
+
     public function update(Request $request, string $id)
     {
         
@@ -61,9 +63,6 @@ class ActivityController extends Controller
         return response()->json(['activity' => $activity]);
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
     public function destroy(string $id)
     {
         
