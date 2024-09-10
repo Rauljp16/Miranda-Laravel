@@ -37,6 +37,7 @@ class ActivityController extends Controller
     
         
         $activity = Activity::create($validatedData);
+        
     
         return view("activities.show", ["activity" => $activity]);
         //return response()->json($activity, 201);
@@ -48,27 +49,38 @@ class ActivityController extends Controller
         //return response()->json(['activity' => $activity]);
     }
 
-    public function edit(string $id)
+    public function edit(Activity $activity)
     {
-        //
+        return view('activities.edit', [
+            'activity' => $activity,
+        ]);
+
     }
 
-    public function update(Request $request, string $id)
+    public function update(Request $request, Activity $activity)
     {
         
-        $activity = Activity::findOrFail($id);
+        $validatedData = $request->validate([
+            'type' => 'required|in:surf,windsurf,kayak,atv,hot air balloon',
+            'date' => 'required|date',
+            'paid' => 'boolean',
+            'notes' => 'nullable|string',
+            'satisfaction' => 'nullable|integer|min:1|max:5',
+            ]);
         
-        $activity->update($request->all());
+            
+            $activity->update($validatedData);
 
-        return response()->json(['activity' => $activity]);
+        return view("activities.update", ["activity" => $activity]);
     }
 
-    public function destroy(string $id)
+    public function destroy(Activity $activity)
     {
-        
-        $activity = Activity::destroy($id);
-
-
-        return response()->json(['message' => 'Activity deleted successfully']);
+    
+        $activity->delete();
+    
+        return view('activities.destroy', [
+            'activity' => $activity,
+        ]);
     }
-}
+    }
