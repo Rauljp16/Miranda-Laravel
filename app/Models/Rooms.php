@@ -29,4 +29,3 @@ class Rooms extends Model
         return $this->hasMany(RoomsImages::class, 'room_id');
     }
 }
-

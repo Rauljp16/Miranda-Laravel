@@ -38,8 +38,4 @@ Route::get('/contact', function(){
 
 
 
-
-//Route::get('/roomDetail/{id}', [RoomsController::class, 'show']);
-
-
 require __DIR__.'/auth.php';
