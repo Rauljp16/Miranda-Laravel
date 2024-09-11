@@ -1,0 +1,3125 @@
+.header {
+    position: fixed;
+    z-index: 10;
+    width: 100vw;
+    height: 70px;
+}
+.header nav {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    height: 100%;
+    width: 100%;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.29);
+    background-color: rgb(255, 255, 255);
+    padding-left: 22px;
+}
+.header nav ul {
+    position: fixed;
+    display: none;
+    left: 0;
+    list-style: none;
+    background-color: rgb(255, 255, 255);
+    padding: 8px 0;
+    z-index: -1;
+}
+.header nav ul li {
+    margin: 21px 16px;
+}
+.header nav ul li a {
+    font-family: "Archivo", sans-serif;
+    font-weight: 600;
+}
+.header .menuDown {
+    position: absolute;
+    display: block;
+    background-color: rgb(255, 255, 255);
+    left: 0;
+    top: 68px;
+    width: 100%;
+}
+.header__menuBurguerSvg {
+    cursor: pointer;
+    transition: transform 500ms;
+}
+.header a {
+    text-decoration: none;
+    color: inherit;
+    font-weight: 700;
+}
+.header__logo {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-family: "Archivo", sans-serif;
+}
+.header__iconSvg {
+    position: absolute;
+    display: flex;
+    width: 70px;
+    right: 0;
+    justify-content: space-between;
+    margin-right: 22px;
+}
+
+.iconLogo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    margin-left: 12px;
+    box-shadow: 0px 14px 24px 0px rgba(139, 139, 139, 0.25);
+    font-size: 18px;
+}
+
+.p1 {
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-size: 12px;
+}
+
+.p2 {
+    font-weight: 400;
+    letter-spacing: 1px;
+    font-size: 12px;
+}
+
+@media only screen and (min-width: 1000px) {
+    .divHeaderDesktop {
+        position: fixed;
+        width: 100%;
+        height: 80px;
+        top: 0;
+        background-color: rgb(34, 34, 34);
+        z-index: 5;
+        transition: transform 0.7s ease-in-out;
+    }
+    .header {
+        position: fixed;
+        width: 80vw;
+        height: 90px;
+        top: 40px;
+        left: 10%;
+    }
+    .header__menuBurguerSvg {
+        display: none;
+    }
+    .header .menuDesktop {
+        position: relative;
+        display: flex;
+        z-index: 5;
+        background-color: transparent;
+    }
+    .header nav {
+        padding-left: 5px;
+        justify-content: space-between;
+    }
+    .header nav ul {
+        width: 53%;
+    }
+    .header nav ul li a {
+        font-size: 18px;
+    }
+    .header__logo .iconLogo {
+        font-size: 35px;
+        width: 65px;
+        height: 65px;
+    }
+    .header__logo .nameHotel .p1 {
+        font-size: 22px;
+    }
+    .header__logo .nameHotel .p2 {
+        font-size: 22px;
+    }
+    .header__iconSvg {
+        position: relative;
+        width: 100px;
+        right: 30px;
+    }
+    .header__iconSvg__accountSvg {
+        border: 1px solid rgba(133, 133, 133, 0.2);
+        padding: 9px;
+    }
+    .header__iconSvg__searchSvg {
+        border: 1px solid rgba(133, 133, 133, 0.2);
+        padding: 9px;
+    }
+}
+.textArchivo {
+    font-family: "Archivo", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: rgb(119, 119, 119);
+}
+
+.title {
+    font-family: "Old Standard TT", serif;
+    font-size: 56px;
+    font-weight: 400;
+    line-height: 60px;
+    letter-spacing: -1.2px;
+    color: rgb(34, 34, 34);
+}
+
+.subTitle {
+    font-family: "Archivo", sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 15.23px;
+    letter-spacing: 2.79px;
+    color: rgb(119, 119, 119);
+}
+
+.subTitleRoboto {
+    font-family: "roboto", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    color: rgb(34, 34, 34);
+}
+
+.containerInfo {
+    background-color: rgb(51, 51, 51);
+}
+
+.info {
+    position: relative;
+    padding: 140px 20px 60px;
+    color: rgb(255, 255, 255);
+}
+.info__subTitle {
+    width: 70%;
+    font-family: "Archivo", sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 2.8px;
+    line-height: 18px;
+    margin-bottom: 38px;
+    color: rgb(255, 255, 255);
+}
+.info__title {
+    font-family: "Old Standard TT", serif;
+    font-size: 56px;
+    line-height: 60px;
+    letter-spacing: -1.2px;
+    margin-bottom: 38px;
+    color: rgb(255, 255, 255);
+}
+.info__take {
+    background-color: rgb(190, 173, 142);
+    border: none;
+    color: rgb(255, 255, 255);
+    height: 60px;
+    font-family: "Archivo", sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 15px;
+    letter-spacing: 2.8px;
+    cursor: pointer;
+    width: 216px;
+    margin: 0 20px 20px 0;
+}
+.info__learn {
+    background-color: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.33);
+    color: rgb(255, 255, 255);
+    height: 60px;
+    font-family: "Archivo", sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 15px;
+    letter-spacing: 2.8px;
+    cursor: pointer;
+    width: 216px;
+}
+
+.infoSmall {
+    padding: 120px 20px 60px;
+}
+
+@media only screen and (min-width: 1000px) {
+    .info {
+        max-width: 80vw;
+        margin: 0 auto;
+        padding: 210px 0px 16px 90px;
+    }
+    .info__title {
+        font-size: 120px;
+        font-weight: 400;
+        line-height: 130px;
+        letter-spacing: -3.59px;
+        max-width: 700px;
+        margin-bottom: 16px;
+    }
+    .info__take {
+        margin-bottom: 70px;
+    }
+    .info .info--titleSmall {
+        font-size: 72px;
+        line-height: 100px;
+    }
+    .info .info--subTitleSmall {
+        margin-bottom: 0px;
+    }
+}
+.textArchivo {
+    font-family: "Archivo", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: rgb(119, 119, 119);
+}
+
+.title {
+    font-family: "Old Standard TT", serif;
+    font-size: 56px;
+    font-weight: 400;
+    line-height: 60px;
+    letter-spacing: -1.2px;
+    color: rgb(34, 34, 34);
+}
+
+.subTitle {
+    font-family: "Archivo", sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 15.23px;
+    letter-spacing: 2.79px;
+    color: rgb(119, 119, 119);
+}
+
+.subTitleRoboto {
+    font-family: "roboto", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    color: rgb(34, 34, 34);
+}
+
+.containerFooter {
+    width: 100%;
+    max-width: 1138px;
+    margin: 0 auto;
+}
+
+footer {
+    position: relative;
+    background-image: url("../../images/fondo.jpg");
+    margin: 40px 0 0;
+    padding: 30px 20px 95px;
+}
+footer .logo {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-family: "Archivo", sans-serif;
+}
+footer .logo .iconLogo {
+    width: 80px;
+    height: 80px;
+    font-size: 40px;
+    background-color: rgb(190, 173, 142);
+    color: rgb(255, 255, 255);
+    margin: 0 5px 0 0;
+}
+footer .logo div .p1 {
+    font-size: 26px;
+}
+footer .logo div .p2 {
+    font-size: 26px;
+}
+footer .footerText {
+    font-family: "Archivo", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: rgb(119, 119, 119);
+    margin: 36px 0 20px;
+    font-size: 16px;
+}
+footer .rrss {
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+}
+footer .rrss div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(248, 248, 248);
+    width: 40px;
+    height: 40px;
+}
+footer .rrss .rrss-gold {
+    background-color: rgb(190, 173, 142);
+}
+footer .services .servicesTitle {
+    font-family: "Old Standard TT", serif;
+    font-size: 56px;
+    line-height: 60px;
+    letter-spacing: -1.2px;
+    margin-bottom: 38px;
+    color: rgb(34, 34, 34);
+    font-size: 24px;
+    line-height: 24px;
+    letter-spacing: 0;
+    margin: 30px 0;
+}
+footer .services article {
+    display: flex;
+}
+footer .services article li {
+    font-family: "roboto", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    color: rgb(119, 119, 119);
+    font-size: 16px;
+    line-height: 48px;
+    list-style-type: none;
+}
+footer .contact {
+    font-family: "Old Standard TT", serif;
+    font-size: 20px;
+    line-height: 24px;
+}
+footer .contact__title {
+    font-size: 24px;
+    margin-top: 30px;
+}
+footer .contact__container {
+    display: flex;
+    margin: 30px 0;
+}
+footer .contact__container article {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+    justify-content: space-around;
+    margin-right: 23px;
+}
+footer .contact__container article span {
+    font-family: "roboto", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    color: rgb(119, 119, 119);
+}
+footer .copyright {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: rgb(248, 248, 248);
+}
+footer .copyright__container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1138px;
+    padding: 20px;
+    gap: 20px;
+}
+footer .copyright__container p {
+    font-family: "roboto", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px;
+    letter-spacing: -0.5px;
+}
+
+@media only screen and (min-width: 1000px) {
+    .hoverZone {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 130px;
+        z-index: 6;
+        background-color: transparent;
+    }
+    footer .containerFooter {
+        display: flex;
+    }
+    footer .containerFooter .containerFooter--desktop {
+        width: 100%;
+    }
+    footer .containerFooter .containerFooter--desktop .footerText {
+        padding-right: 70px;
+    }
+    footer .services article {
+        justify-content: space-between;
+    }
+    footer .contact {
+        padding-left: 105px;
+    }
+    footer .copyright__container {
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 0 auto;
+        padding: 30px;
+    }
+}
+.textArchivo {
+    font-family: "Archivo", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: rgb(119, 119, 119);
+}
+
+.title {
+    font-family: "Old Standard TT", serif;
+    font-size: 56px;
+    font-weight: 400;
+    line-height: 60px;
+    letter-spacing: -1.2px;
+    color: rgb(34, 34, 34);
+}
+
+.subTitle {
+    font-family: "Archivo", sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 15.23px;
+    letter-spacing: 2.79px;
+    color: rgb(119, 119, 119);
+}
+
+.subTitleRoboto {
+    font-family: "roboto", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    color: rgb(34, 34, 34);
+}
+
+.breadcrumb {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    margin-right: 20px;
+    padding: 16px;
+    font-family: "Archivo", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 17.23px;
+}
+.breadcrumb__link {
+    position: relative;
+    color: rgb(34, 34, 34);
+    text-decoration: none;
+    cursor: pointer;
+}
+.breadcrumb__divider {
+    position: relative;
+    color: rgb(34, 34, 34);
+    margin: 0 8px;
+}
+.breadcrumb__pageActual {
+    position: relative;
+    color: rgb(190, 173, 142);
+    cursor: default;
+}
+
+.textArchivo {
+    font-family: "Archivo", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: rgb(119, 119, 119);
+}
+
+.title {
+    font-family: "Old Standard TT", serif;
+    font-size: 56px;
+    font-weight: 400;
+    line-height: 60px;
+    letter-spacing: -1.2px;
+    color: rgb(34, 34, 34);
+}
+
+.subTitle {
+    font-family: "Archivo", sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 15.23px;
+    letter-spacing: 2.79px;
+    color: rgb(119, 119, 119);
+}
+
+.subTitleRoboto {
+    font-family: "roboto", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    color: rgb(34, 34, 34);
+}
+
+.textArchivo {
+    font-family: "Archivo", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: rgb(119, 119, 119);
+}
+
+.title {
+    font-family: "Old Standard TT", serif;
+    font-size: 56px;
+    font-weight: 400;
+    line-height: 60px;
+    letter-spacing: -1.2px;
+    color: rgb(34, 34, 34);
+}
+
+.subTitle {
+    font-family: "Archivo", sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 15.23px;
+    letter-spacing: 2.79px;
+    color: rgb(119, 119, 119);
+}
+
+.subTitleRoboto {
+    font-family: "roboto", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    color: rgb(34, 34, 34);
+}
+
+.slider {
+    text-align: center;
+}
+.slider .subTitle--noButton {
+    margin: 50px 0 20px;
+}
+.slider .swiperRoomsHome {
+    max-width: 1500px;
+}
+.slider .swiperRoomsHome .button-next-roomsHome {
+    top: 145px;
+    background-color: rgb(190, 173, 142);
+    color: rgb(255, 255, 255);
+    width: 32px;
+    height: 32px;
+}
+.slider .swiperRoomsHome .button-prev-roomsHome {
+    top: 145px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(17, 17, 17);
+    width: 32px;
+    height: 32px;
+}
+.slider .swiperRoomsHome ::after {
+    font-size: x-small;
+}
+.slider .swiperRoomsHome .imgSlideRoom {
+    width: 100%;
+    height: 300px;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+.slider .swiperRoomsHome .swiper-slide-active .minimal {
+    display: block;
+}
+.slider .swiperRoomsHome .minimal {
+    display: none;
+}
+.slider .swiperRoomsHome .swiper-slide-prev .minimal,
+.slider .swiperRoomsHome .swiper-slide-next .minimal {
+    display: none;
+}
+.slider .swiperRoomsHome .swiper-slide .minimal {
+    padding: 19px 40px;
+    margin: 0 20px;
+    background-color: rgb(255, 255, 255);
+    position: relative;
+    bottom: 25px;
+}
+.slider .swiperRoomsHome .swiper-slide .minimal__title {
+    font-family: "Old Standard TT", serif;
+    font-size: 56px;
+    line-height: 60px;
+    letter-spacing: -1.2px;
+    margin-bottom: 38px;
+    color: rgb(34, 34, 34);
+    font-size: 28px;
+    line-height: 36px;
+    margin-bottom: 10px;
+}
+.slider .swiperRoomsHome .swiper-slide .minimal__subTitle {
+    font-family: "roboto", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    color: rgb(119, 119, 119);
+    line-height: 24px;
+}
+.slider .swiperRoomsHome .swiper-slide .minimal .container--price {
+    display: flex;
+    justify-content: center;
+}
+.slider .swiperRoomsHome .swiper-slide .minimal .container--price .price {
+    font-family: "Archivo", sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 43px;
+    color: rgb(190, 173, 142);
+}
+.slider .swiperRoomsHome .swiper-slide .minimal .container--price .priceText {
+    font-size: 13px;
+}
+
+.slider {
+    position: relative;
+}
+.slider .swiperFacilitiesHome {
+    margin: 50px 0;
+}
+.slider .swiperFacilitiesHome .facilityCard {
+    text-align: start;
+    padding: 25px 35px 50px;
+    margin: 0 20px;
+}
+.slider .swiperFacilitiesHome .facilityCard .iconContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+.slider .swiperFacilitiesHome .facilityCard .iconContainer__svg {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 20px;
+}
+.slider .swiperFacilitiesHome .facilityCard .iconContainer__number {
+    font-family: Archivo;
+    font-size: 120px;
+    font-weight: 700;
+    line-height: 130px;
+    color: rgba(34, 34, 34, 0.04);
+    margin-bottom: 20px;
+}
+.slider .swiperFacilitiesHome .facilityCard .title--small {
+    font-size: 30px;
+    line-height: 30px;
+    letter-spacing: -0.9px;
+    margin-bottom: 20px;
+}
+.slider .swiperFacilitiesHome .swiper-pagination-bullet-active {
+    background: rgb(190, 173, 142);
+}
+
+.slider .swiperMenuFoodHome1 .swiper-wrapper {
+    margin-bottom: 100px;
+}
+.slider .swiperMenuFoodHome1 .swiper-wrapper .elementMenu {
+    display: flex;
+    margin: 0 20px 20px 20px;
+}
+.slider .swiperMenuFoodHome1 .swiper-wrapper .elementMenu__img {
+    width: 120px;
+    height: 120px;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+.slider .swiperMenuFoodHome1 .swiper-wrapper .elementMenu__text {
+    text-align: start;
+    margin: 10px 10px 10px 30px;
+}
+.slider .swiperMenuFoodHome1 .swiper-wrapper .elementMenu__text__title {
+    font-family: Old Standard TT;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: -0.72px;
+    color: rgb(34, 34, 34);
+    margin-bottom: 10px;
+}
+.slider .swiperMenuFoodHome1 .swiper-wrapper .elementMenu__text__subtitle {
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+}
+.slider .swiperMenuFoodHome1 .button-next-foodMenu {
+    top: 90%;
+    right: 20px;
+    background-color: rgb(190, 173, 142);
+    color: rgb(255, 255, 255);
+    width: 36px;
+    height: 36px;
+}
+.slider .swiperMenuFoodHome1 .button-prev-foodMenu {
+    top: 90%;
+    left: 72%;
+    background-color: rgb(248, 248, 248);
+    color: rgb(17, 17, 17);
+    width: 36px;
+    height: 36px;
+}
+.slider .swiperMenuFoodHome1 ::after {
+    font-size: x-small;
+}
+
+.slider .swiperMenuFoodHome2 .swiper-slide {
+    padding: 16px 16px 40px;
+}
+.slider .swiperMenuFoodHome2 .swiper-slide .img-slider3 {
+    width: 100%;
+    height: 300px;
+}
+.slider .swiperMenuFoodHome2 .swiper-pagination-bullet-active {
+    background: rgb(190, 173, 142);
+}
+
+@media only screen and (min-width: 1000px) {
+    .slider .swiperRoomsHome .button-next-roomsHome {
+        width: 50px !important;
+        height: 50px !important;
+        right: 26%;
+    }
+    .slider .swiperRoomsHome .button-prev-roomsHome {
+        width: 50px !important;
+        height: 50px !important;
+        left: 26%;
+    }
+    .slider .swiperRoomsHome ::after {
+        font-size: medium !important;
+    }
+    .slider .swiperRoomsHome .swiper-slide-active .minimal {
+        display: flex;
+        padding: 19px 0;
+        align-items: center;
+    }
+    .slider .swiperRoomsHome .swiper-slide-active .minimal .divDesktop {
+        display: flex;
+        flex-direction: column;
+    }
+    .slider .swiper-scrollbar {
+        display: none;
+    }
+    .slider .swiperFacilitiesHome {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        overflow: visible;
+        max-width: 1138px;
+        margin: 50px auto 0;
+    }
+    .slider .swiperFacilitiesHome .swiper-wrapper {
+        display: contents;
+    }
+    .slider .swiperFacilitiesHome .swiper-slide {
+        flex: none;
+        display: block;
+        width: 100% !important;
+        margin: 0;
+    }
+    .slider .swiper-pagination {
+        display: none;
+    }
+    .slider .swiperMenuFoodHome1 {
+        max-width: 1138px;
+        margin: 0 auto;
+        padding-top: 100px;
+    }
+    .slider .swiperMenuFoodHome1 .swiper-wrapper .swiper-slide {
+        padding: 0 80px 0 0;
+        margin-top: 16px;
+    }
+    .slider .swiperMenuFoodHome1 .button-next-foodMenu {
+        top: 25px;
+        right: 45px;
+        width: 50px;
+        height: 50px;
+    }
+    .slider .swiperMenuFoodHome1 .button-prev-foodMenu {
+        top: 25px;
+        left: 84%;
+        width: 50px;
+        height: 50px;
+    }
+    .slider .swiperMenuFoodHome1 ::after {
+        font-size: x-small;
+        font-weight: 600;
+    }
+    .slider .swiperMenuFoodHome2 {
+        max-width: 1137px;
+        margin: auto;
+    }
+    .slider .swiperMenuFoodHome2 .swiper-slide {
+        padding: 16px 0 40px;
+        height: 370px;
+        width: 370px;
+    }
+    .slider .swiperMenuFoodHome2 .swiper-slide .img-slider3 {
+        width: 100%;
+        height: 100%;
+        -o-object-fit: cover;
+        object-fit: cover;
+    }
+    .slider .swiperMenuFoodHome2 .swiper-pagination-bullet-active {
+        background: rgb(190, 173, 142);
+    }
+    .slider .swiperMenuFoodHome2 .swiper-wrapper {
+        margin: 0 0 40px 0;
+        gap: 20px;
+    }
+}
+.textArchivo {
+    font-family: "Archivo", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: rgb(119, 119, 119);
+}
+
+.title {
+    font-family: "Old Standard TT", serif;
+    font-size: 56px;
+    font-weight: 400;
+    line-height: 60px;
+    letter-spacing: -1.2px;
+    color: rgb(34, 34, 34);
+}
+
+.subTitle {
+    font-family: "Archivo", sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 15.23px;
+    letter-spacing: 2.79px;
+    color: rgb(119, 119, 119);
+}
+
+.subTitleRoboto {
+    font-family: "roboto", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    color: rgb(34, 34, 34);
+}
+
+.videoHome {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(34, 34, 34);
+    padding: 64px 20px 0;
+}
+.videoHome__containerVideoHome__subTitle {
+    font-family: "Archivo", sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 2.8px;
+    line-height: 18px;
+    margin-bottom: 38px;
+    color: rgb(189, 172, 141);
+    margin-bottom: 28px;
+}
+.videoHome__containerVideoHome__title {
+    font-family: "Old Standard TT", serif;
+    font-size: 56px;
+    line-height: 60px;
+    letter-spacing: -1.2px;
+    margin-bottom: 38px;
+    color: rgb(255, 255, 255);
+    margin-bottom: 16px;
+    max-width: 500px;
+}
+.videoHome__containerVideoHome__text {
+    font-family: "Archivo", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: rgb(194, 194, 194);
+    margin-bottom: 30px;
+    max-width: 360px;
+}
+.videoHome__containerVideoHome__videoDiv {
+    max-width: 440px;
+    height: 270px;
+    margin: 0 auto;
+}
+.videoHome__containerVideoHome button {
+    background-color: rgb(189, 172, 141);
+    border: none;
+    color: rgb(255, 255, 255);
+    height: 60px;
+    font-family: "Archivo", sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 15px;
+    letter-spacing: 2.8px;
+    cursor: pointer;
+    width: 216px;
+    margin: 28px 0 40px;
+}
+
+.videoHome--about {
+    background-color: rgb(255, 255, 255);
+    padding: 50px 20px 0;
+}
+.videoHome--about .videoHome--aboutContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+}
+.videoHome--about .videoHome--aboutContainer .video--aboutContainer {
+    width: 100%;
+    height: 190px;
+}
+.videoHome--about .videoHome--aboutContainer .title--about {
+    font-family: "Old Standard TT", serif;
+    font-size: 56px;
+    line-height: 60px;
+    letter-spacing: -1.2px;
+    margin-bottom: 38px;
+    color: rgb(34, 34, 34);
+    font-size: 32px;
+    line-height: 39px;
+    letter-spacing: -1.16px;
+    text-align: center;
+    margin-top: 36px;
+    color: #222222 !important;
+}
+
+@media only screen and (min-width: 1000px) {
+    .videoHome {
+        flex-direction: row;
+        padding: 0;
+        position: relative;
+        height: 600px;
+        margin-top: 50px;
+    }
+    .videoHome .videoHome--info {
+        position: absolute;
+        top: 104px;
+        padding-right: 14%;
+    }
+    .videoHome__containerVideoHome {
+        width: 70%;
+        padding: 70px 0px;
+        display: flex;
+        justify-content: flex-end;
+    }
+    .videoHome__containerVideoHome__videoDiv {
+        position: absolute;
+        top: 0px;
+        right: -180px;
+        width: 420px;
+        height: 392px;
+    }
+    .videoHome button {
+        margin: 0;
+    }
+    .videoHome .divGold {
+        width: 30%;
+        background-color: rgb(173, 157, 130);
+    }
+    .videoHome--about {
+        height: 100%;
+    }
+    .videoHome--about .videoHome--aboutContainer {
+        max-width: 1138px;
+        align-items: center;
+    }
+    .videoHome--about .videoHome--aboutContainer .video--aboutContainer {
+        width: 100%;
+        height: 600px;
+    }
+    .videoHome--about .videoHome--aboutContainer .title--about {
+        font-size: 60px;
+        line-height: 80px;
+        max-width: 900px;
+    }
+}
+.textArchivo {
+    font-family: "Archivo", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: rgb(119, 119, 119);
+}
+
+.title {
+    font-family: "Old Standard TT", serif;
+    font-size: 56px;
+    font-weight: 400;
+    line-height: 60px;
+    letter-spacing: -1.2px;
+    color: rgb(34, 34, 34);
+}
+
+.subTitle {
+    font-family: "Archivo", sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 15.23px;
+    letter-spacing: 2.79px;
+    color: rgb(119, 119, 119);
+}
+
+.subTitleRoboto {
+    font-family: "roboto", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    color: rgb(34, 34, 34);
+}
+
+.aboutUsHome {
+    position: relative;
+    width: 100%;
+    margin-top: 60px;
+}
+.aboutUsHome__info {
+    position: relative;
+    padding: 38px 20px 180px;
+    margin-bottom: -60px;
+    background-color: rgb(249, 249, 249);
+}
+.aboutUsHome__info__title {
+    font-family: "Old Standard TT", serif;
+    font-size: 56px;
+    line-height: 60px;
+    letter-spacing: -1.2px;
+    margin-bottom: 38px;
+    color: rgb(17, 17, 17);
+    margin-bottom: 14px;
+    max-width: 500px;
+}
+.aboutUsHome__info__subTitle {
+    font-family: "Archivo", sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 2.8px;
+    line-height: 18px;
+    margin-bottom: 38px;
+    color: rgb(119, 119, 119);
+    margin-bottom: 30px;
+}
+.aboutUsHome__info .text {
+    font-family: "Archivo", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: rgb(119, 119, 119);
+}
+.aboutUsHome__info button {
+    background-color: rgb(190, 173, 142);
+    border: none;
+    color: rgb(255, 255, 255);
+    height: 60px;
+    font-family: "Archivo", sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 15px;
+    letter-spacing: 2.8px;
+    cursor: pointer;
+    width: 217px;
+    margin: 23px 0 0 0;
+}
+.aboutUsHome .containerTeamLuxury {
+    position: relative;
+    bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+.aboutUsHome .team {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.aboutUsHome .team img {
+    width: 100%;
+    height: 100%;
+}
+.aboutUsHome .team .divTeam {
+    padding-bottom: 50px;
+    box-shadow: 0 8px 16px rgba(34, 34, 34, 0.03);
+}
+.aboutUsHome .team div {
+    position: relative;
+    width: 270px;
+    height: 300px;
+    text-align: center;
+    line-height: 0;
+}
+.aboutUsHome .team div .teamGold {
+    width: 68px;
+    height: 50px;
+    margin: 54px 0 25px;
+}
+.aboutUsHome .team div .teamGrey {
+    position: absolute;
+    width: 144px;
+    height: 106px;
+    right: 0;
+    top: 50px;
+    z-index: -2;
+}
+.aboutUsHome .team div .info__title {
+    font-size: 30px;
+    line-height: 30px;
+    letter-spacing: -0.9px;
+    margin: 0;
+    color: rgb(17, 17, 17);
+}
+.aboutUsHome .team div .textRoboto {
+    font-family: "roboto", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    color: rgb(17, 17, 17);
+    margin: 35px 35px 0;
+}
+.aboutUsHome__luxury {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+.aboutUsHome__luxury img {
+    width: 100%;
+    height: 100%;
+}
+.aboutUsHome__luxury div {
+    width: 270px;
+    height: 300px;
+}
+.aboutUsHome__luxury .divLuxury {
+    text-align: center;
+    background-color: rgb(34, 34, 34);
+    padding: 35px;
+}
+.aboutUsHome__luxury .divLuxury .teamGold {
+    width: 68px;
+    height: 50px;
+    margin: 25px;
+}
+.aboutUsHome__luxury .divLuxury .info__title {
+    font-size: 30px;
+    line-height: 30px;
+    letter-spacing: -0.9px;
+    margin-bottom: 20px;
+    color: rgb(255, 255, 255);
+}
+.aboutUsHome__luxury .divLuxury .textRoboto {
+    font-family: "roboto", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    color: rgb(255, 255, 255);
+}
+
+@media only screen and (min-width: 1000px) {
+    .aboutUsHome {
+        display: flex;
+        flex-direction: row-reverse;
+        margin: 110px 0 0 0;
+        padding: 90px 0 90px 10%;
+    }
+    .aboutUsHome .containerTeamLuxury {
+        position: relative;
+        display: flex;
+        bottom: 130px;
+        left: 80px;
+        flex-direction: row;
+        align-items: center;
+        gap: 30px;
+    }
+    .aboutUsHome .team {
+        flex-direction: column-reverse;
+    }
+    .aboutUsHome__luxury {
+        gap: 30px;
+        top: 30px;
+    }
+    .aboutUsHome__info {
+        margin: 0;
+        padding: 0px 0 0 130px;
+        width: 100%;
+    }
+    .aboutUsHome__info__title {
+        margin-bottom: 14px;
+        font-size: 70px;
+        line-height: 90px;
+        letter-spacing: -2.4px;
+    }
+    .aboutUsHome__info__subTitle {
+        position: absolute;
+        top: -45px;
+        color: rgb(119, 119, 119);
+        font-size: 14px;
+    }
+    .aboutUsHome__info .text {
+        max-width: 400px;
+    }
+}
+.textArchivo {
+    font-family: "Archivo", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: rgb(119, 119, 119);
+}
+
+.title {
+    font-family: "Old Standard TT", serif;
+    font-size: 56px;
+    font-weight: 400;
+    line-height: 60px;
+    letter-spacing: -1.2px;
+    color: rgb(34, 34, 34);
+}
+
+.subTitle {
+    font-family: "Archivo", sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 15.23px;
+    letter-spacing: 2.79px;
+    color: rgb(119, 119, 119);
+}
+
+.subTitleRoboto {
+    font-family: "roboto", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    color: rgb(34, 34, 34);
+}
+
+.benefits {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(34, 34, 34);
+    color: rgb(255, 255, 255);
+    padding-bottom: 40px;
+    margin-top: 20px;
+}
+.benefits article {
+    text-align: center;
+}
+.benefits article img {
+    margin: 48px 0 16px;
+}
+.benefits article div .benefits--title {
+    font-family: "roboto", sans-serif;
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 82px;
+    margin-bottom: -16px;
+}
+.benefits article div span {
+    font-family: "roboto", sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+}
+.benefits article .benefits--text {
+    font-family: "roboto", sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+    color: rgb(153, 153, 153);
+}
+
+@media only screen and (min-width: 1000px) {
+    .benefits {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        max-width: 1138px;
+        margin: auto;
+        padding: 0;
+    }
+    .benefits article {
+        padding: 0 40px 40px;
+    }
+}
+.textArchivo {
+    font-family: "Archivo", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: rgb(119, 119, 119);
+}
+
+.title {
+    font-family: "Old Standard TT", serif;
+    font-size: 56px;
+    font-weight: 400;
+    line-height: 60px;
+    letter-spacing: -1.2px;
+    color: rgb(34, 34, 34);
+}
+
+.subTitle {
+    font-family: "Archivo", sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 15.23px;
+    letter-spacing: 2.79px;
+    color: rgb(119, 119, 119);
+}
+
+.subTitleRoboto {
+    font-family: "roboto", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    color: rgb(34, 34, 34);
+}
+
+.date {
+    position: relative;
+    width: 100%;
+    padding: 36px 20px;
+    background-color: rgb(34, 34, 34);
+    font-family: "roboto", sans-serif;
+}
+.date__form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.date__form__div__label {
+    color: rgb(255, 255, 255);
+    width: 100%;
+}
+.date__form__div__input {
+    position: relative;
+    width: 100%;
+    height: 40px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid rgb(190, 173, 142);
+    color: rgb(104, 104, 104);
+    outline: none;
+    letter-spacing: 1px;
+    font-size: 14px;
+    font-weight: 400;
+    margin: 15px 0;
+    text-indent: 20px;
+}
+.date__form__div ::-webkit-calendar-picker-indicator {
+    position: absolute;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+.date__form__div .calendarArrival {
+    position: absolute;
+    left: 20px;
+    top: 80px;
+    pointer-events: none;
+}
+.date__form__div .calendarDeparture {
+    position: absolute;
+    left: 20px;
+    top: 170px;
+    pointer-events: none;
+}
+.date__form button {
+    background-color: rgb(190, 173, 142);
+    border: none;
+    color: rgb(255, 255, 255);
+    height: 60px;
+    font-family: "Archivo", sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 15px;
+    letter-spacing: 2.8px;
+    cursor: pointer;
+    width: 250px;
+    margin-top: 30px;
+}
+
+@media only screen and (min-width: 1000px) {
+    .date {
+        padding: 20px 120px 0 100px;
+    }
+    .date__form {
+        position: relative;
+        left: 11%;
+        flex-direction: row;
+        justify-content: space-between;
+        max-width: 950px;
+    }
+    .date__form__div {
+        position: relative;
+    }
+    .date__form__div .calendarArrival {
+        left: 0px;
+        top: 44px;
+    }
+    .date__form__div .calendarDeparture {
+        left: 0px;
+        top: 44px;
+    }
+    .date button {
+        width: 250px;
+        margin-top: 10px;
+    }
+}
+.menuFoodHome {
+    position: relative;
+    width: 100%;
+}
+.menuFoodHome__iconSvg {
+    position: relative;
+    width: 100%;
+    height: 114.5px;
+    overflow: hidden;
+}
+.menuFoodHome__iconSvg__svg {
+    position: absolute;
+    top: 0px;
+    right: -25px;
+    width: 114.5px;
+    height: 114.5px;
+}
+.menuFoodHome__containerText {
+    width: 100%;
+    padding: 0 20px;
+}
+.menuFoodHome__containerText .subTitle--containerText {
+    margin-bottom: 20px;
+}
+
+@media only screen and (min-width: 1000px) {
+    .menuFoodHome__iconSvg {
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+    .menuFoodHome__iconSvg__svg {
+        left: 0px;
+    }
+    .menuFoodHome__containerText {
+        max-width: 1138px;
+        margin: 0 auto -70px;
+    }
+    .menuFoodHome__containerText .title--containerText {
+        font-size: 70px;
+        margin: 26px 0 0 0;
+    }
+}
+.textArchivo {
+    font-family: "Archivo", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: rgb(119, 119, 119);
+}
+
+.title {
+    font-family: "Old Standard TT", serif;
+    font-size: 56px;
+    font-weight: 400;
+    line-height: 60px;
+    letter-spacing: -1.2px;
+    color: rgb(34, 34, 34);
+}
+
+.subTitle {
+    font-family: "Archivo", sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 15.23px;
+    letter-spacing: 2.79px;
+    color: rgb(119, 119, 119);
+}
+
+.subTitleRoboto {
+    font-family: "roboto", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    color: rgb(34, 34, 34);
+}
+
+.roomsHome {
+    text-align: center;
+    z-index: -1;
+}
+.roomsHome__subTitle {
+    font-family: "Archivo", sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 2.8px;
+    line-height: 18px;
+    margin-bottom: 38px;
+    color: rgb(119, 119, 119);
+    margin-bottom: 23px;
+}
+.roomsHome__title {
+    font-family: "Old Standard TT", serif;
+    font-size: 56px;
+    line-height: 60px;
+    letter-spacing: -1.2px;
+    margin-bottom: 38px;
+    color: rgb(34, 34, 34);
+}
+.roomsHome__icons {
+    position: relative;
+    z-index: 2;
+    top: 20px;
+    width: 256px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 8px 16px rgba(138, 138, 138, 0.05);
+    padding: 12px;
+}
+
+@media only screen and (min-width: 1000px) {
+    .roomsHome__title {
+        font-size: 80px;
+    }
+    .roomsHome__subTitle {
+        font-size: 14px;
+    }
+}
+.textArchivo {
+    font-family: "Archivo", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: rgb(119, 119, 119);
+}
+
+.title {
+    font-family: "Old Standard TT", serif;
+    font-size: 56px;
+    font-weight: 400;
+    line-height: 60px;
+    letter-spacing: -1.2px;
+    color: rgb(34, 34, 34);
+}
+
+.subTitle {
+    font-family: "Archivo", sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 15.23px;
+    letter-spacing: 2.79px;
+    color: rgb(119, 119, 119);
+}
+
+.subTitleRoboto {
+    font-family: "roboto", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    color: rgb(34, 34, 34);
+}
+
+.iconInfo {
+    padding: 0 20px;
+    font-family: Archivo;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 14px;
+    letter-spacing: 2.4px;
+    text-align: center;
+}
+.iconInfo__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin: 0 auto;
+    justify-items: center;
+    max-width: 500px;
+}
+.iconInfo__container__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0;
+}
+.iconInfo__container .item--bbq {
+    display: none;
+}
+.iconInfo .container--airport {
+    background-color: rgb(190, 173, 142);
+    color: rgb(255, 255, 255);
+}
+
+@media only screen and (min-width: 1000px) {
+    .iconInfo {
+        margin: 10px 0 70px;
+    }
+    .iconInfo__container {
+        display: flex;
+        max-width: 1138px;
+        margin: 0 auto;
+        justify-content: space-between;
+    }
+    .iconInfo .item--bbq {
+        display: block;
+        display: flex;
+        width: 158px;
+        height: 158px;
+    }
+}
+.textArchivo {
+    font-family: "Archivo", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: rgb(119, 119, 119);
+}
+
+.title {
+    font-family: "Old Standard TT", serif;
+    font-size: 56px;
+    font-weight: 400;
+    line-height: 60px;
+    letter-spacing: -1.2px;
+    color: rgb(34, 34, 34);
+}
+
+.subTitle {
+    font-family: "Archivo", sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 15.23px;
+    letter-spacing: 2.79px;
+    color: rgb(119, 119, 119);
+}
+
+.subTitleRoboto {
+    font-family: "roboto", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    color: rgb(34, 34, 34);
+}
+
+.facilitiesRestaurant {
+    width: 100%;
+    padding: 0 20px;
+    margin-top: 60px;
+}
+.facilitiesRestaurant__container {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 14px 24px 0px rgba(184, 184, 184, 0.1);
+    max-width: 500px;
+    margin: 0 auto;
+}
+.facilitiesRestaurant__container__img {
+    width: 100%;
+    height: 100%;
+}
+.facilitiesRestaurant__container__text .facilitiesRestaurant--subtitle {
+    margin: 30px 0;
+}
+.facilitiesRestaurant__container__text .facilitiesRestaurant--title {
+    font-size: 40px;
+    line-height: 50px;
+    letter-spacing: -1.05px;
+    color: #222222;
+}
+.facilitiesRestaurant__container__text__description {
+    font-family: "Archivo", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: rgb(119, 119, 119);
+    margin: 20px 0;
+}
+.facilitiesRestaurant__container__text__button {
+    background-color: rgb(190, 173, 142);
+    border: none;
+    color: rgb(255, 255, 255);
+    height: 60px;
+    font-family: "Archivo", sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 15px;
+    letter-spacing: 2.8px;
+    cursor: pointer;
+    width: 216px;
+    margin: 0 20px 20px 0;
+}
+
+@media only screen and (min-width: 1000px) {
+    .facilitiesRestaurant__container {
+        flex-direction: row;
+        max-width: 1138px;
+        padding: 30px;
+    }
+    .facilitiesRestaurant__container__text {
+        padding: 20px 0px 20px 40px;
+    }
+}
+.facilitiesAbout {
+    margin: 50px 0 0;
+    background-color: rgb(34, 34, 34);
+}
+
+.titleFacilities--about {
+    color: rgb(255, 255, 255) !important;
+}
+
+.subTitle--about {
+    color: rgb(255, 255, 255);
+    padding: 48px 0 0 0;
+}
+
+.facilityCardAbout {
+    background-color: rgb(41, 41, 41);
+}
+
+.numberFacilitiesAbout {
+    color: rgb(34, 34, 34) !important;
+}
+
+.title--about {
+    color: rgb(255, 255, 255) !important;
+}
+
+.text--about {
+    color: rgb(255, 255, 255) !important;
+}
+
+.sliderAbout1 {
+    padding: 0 0 40px 0;
+    margin: 0 auto;
+}
+
+.slider {
+    position: relative;
+}
+.slider .swiperAbout1 {
+    max-width: 500px;
+}
+.slider .swiperAbout1 .facilityCard {
+    text-align: start;
+    padding: 0px 20px 55px;
+    margin: 25px 20px 35px;
+}
+.slider .swiperAbout1 .facilityCard .iconContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+.slider .swiperAbout1 .facilityCard .iconContainer__svg {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 20px;
+}
+.slider .swiperAbout1 .facilityCard .iconContainer__number {
+    font-family: Archivo;
+    font-size: 120px;
+    font-weight: 700;
+    line-height: 130px;
+    color: rgba(34, 34, 34, 0.04);
+    margin-bottom: 40px;
+}
+.slider .swiperAbout1 .facilityCard .title--small {
+    font-size: 30px;
+    line-height: 30px;
+    letter-spacing: -0.9px;
+    margin: 20px 0 25px;
+}
+.slider .swiperAbout1 .swiper-pagination-bullet-active {
+    background: rgb(190, 173, 142);
+}
+.slider .swiperAbout1 .paginationsAbout1 {
+    position: absolute;
+    bottom: 0;
+}
+
+@media only screen and (min-width: 1000px) {
+    .sliderAbout1 {
+        padding: 0 0 70px 0;
+    }
+    .subTitle--about {
+        padding: 70px 0 0 0;
+    }
+    .slider .swiperAbout1 {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+        overflow: visible;
+        max-width: 1200px;
+        margin: 50px auto 0;
+        padding: 20px;
+    }
+    .slider .swiperAbout1 .swiper-wrapper {
+        display: contents;
+    }
+    .slider .swiperAbout1 .swiper-slide {
+        flex: none;
+        display: block;
+        width: 100% !important;
+        margin: 0;
+    }
+    .slider .swiperAbout1 .facilityCard {
+        margin: 0;
+    }
+}
+.counter {
+    width: 100%;
+    padding: 40px 20px 0 20px;
+}
+.counter .subTitleAbout {
+    margin: 20px 0;
+}
+.counter .titleAbout {
+    margin: 20px 0;
+}
+
+.containerCardsAbout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.containerCardsAbout__card {
+    width: 100%;
+    display: flex;
+    margin: 30px 0;
+}
+.containerCardsAbout__card__div {
+    width: 50%;
+    text-align: center;
+}
+.containerCardsAbout__card__div__number {
+    font-family: "Old Standard TT" sans-serif;
+    font-size: 60px;
+    font-weight: 400;
+    line-height: 60px;
+    letter-spacing: -1.8px;
+}
+.containerCardsAbout__card__div__text {
+    font-family: "roboto", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 16px;
+    color: rgb(119, 119, 119);
+}
+
+.slider .swiperAbout2 .swiper-slide {
+    padding: 16px 16px 40px;
+}
+.slider .swiperAbout2 .swiper-slide .img-slider3 {
+    width: 100%;
+}
+.slider .swiperAbout2 .swiper-pagination-bullet-active {
+    background: rgb(190, 173, 142);
+}
+
+@media only screen and (min-width: 1000px) {
+    .counter {
+        max-width: 1138px;
+        margin: 0 auto;
+        padding: 60px 0 0;
+    }
+    .containerCardsAbout {
+        flex-direction: row;
+    }
+    .containerCardsAbout__card {
+        margin: 30px 0 30px 20px;
+        gap: 16px;
+    }
+    .containerCardsAbout__card__div {
+        width: auto;
+        text-align: start;
+    }
+    .slider .swiperAbout2 {
+        max-width: 1138px;
+        margin: auto;
+    }
+    .slider .swiperAbout2 .swiper-slide {
+        padding: 16px 0px 40px;
+    }
+    .slider .swiperAbout2 .swiper-slide .img-slider3 {
+        width: 100%;
+        height: 100%;
+        -o-object-fit: cover;
+        object-fit: cover;
+    }
+    .slider .swiperAbout2 .swiper-wrapper {
+        gap: 30px;
+    }
+}
+.roomsPage {
+    width: 100%;
+    padding: 40px 20px 20px;
+}
+
+.CardContainer {
+    display: flex;
+    flex-direction: column;
+    max-width: 1138px;
+    margin: 0 auto;
+}
+.CardContainer .roomcard {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 40px auto;
+    max-width: 500px;
+}
+.CardContainer .roomcard__img {
+    width: 100%;
+    max-width: 335px;
+    height: 55%;
+}
+.CardContainer .roomcard__icons {
+    position: relative;
+    z-index: 5;
+    top: -18px;
+    width: 256px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 8px 16px rgba(138, 138, 138, 0.05);
+    padding: 12px;
+}
+.CardContainer .roomcard__minimal {
+    text-align: center;
+    padding: 10px 15px;
+}
+.CardContainer .roomcard__minimal__title {
+    font-family: "Old Standard TT", serif;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: -0.72px;
+}
+.CardContainer .roomcard__minimal__subTitle {
+    font-family: "roboto", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    color: rgb(119, 119, 119);
+    margin: 18px 0;
+}
+.CardContainer .roomcard__minimal__divPrice {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    font-family: "Archivo", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 17.41px;
+    text-align: right;
+}
+.CardContainer .roomcard__minimal__divPrice__price {
+    color: rgb(190, 173, 142);
+}
+.CardContainer .roomcard__minimal__divPrice__booking {
+    color: rgb(189, 189, 189);
+    cursor: pointer;
+}
+
+.pagination {
+    display: flex;
+    justify-content: space-between;
+    max-width: 500px;
+    margin: 0 auto;
+}
+.pagination__number {
+    font-family: "Oswald", sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    width: 39px;
+    height: 39px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pagination .pagination--2 {
+    background-color: rgb(190, 173, 142);
+    color: rgb(255, 255, 255);
+}
+
+@media only screen and (min-width: 1000px) {
+    .CardContainer {
+        flex-direction: row;
+    }
+}
+.textArchivo {
+    font-family: "Archivo", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: rgb(119, 119, 119);
+}
+
+.title {
+    font-family: "Old Standard TT", serif;
+    font-size: 56px;
+    font-weight: 400;
+    line-height: 60px;
+    letter-spacing: -1.2px;
+    color: rgb(34, 34, 34);
+}
+
+.subTitle {
+    font-family: "Archivo", sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 15.23px;
+    letter-spacing: 2.79px;
+    color: rgb(119, 119, 119);
+}
+
+.subTitleRoboto {
+    font-family: "roboto", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    color: rgb(34, 34, 34);
+}
+
+.roomDetails {
+    padding: 40px 20px;
+}
+
+.containerInfoDetails {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 0 auto;
+    gap: 40px;
+}
+.containerInfoDetails .infoDetails__subTitle {
+    font-family: "Archivo", sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 2.8px;
+    line-height: 18px;
+    margin-bottom: 38px;
+    color: rgb(119, 119, 119);
+    margin: 0;
+    font-size: 14px;
+    line-height: 15.2px;
+}
+.containerInfoDetails .infoDetails__divTitle {
+    display: flex;
+    flex-direction: column;
+}
+.containerInfoDetails .infoDetails__divTitle__title {
+    font-family: "Old Standard TT", serif;
+    font-size: 56px;
+    line-height: 60px;
+    letter-spacing: -1.2px;
+    margin-bottom: 38px;
+    color: rgb(34, 34, 34);
+    margin: 12px 0;
+    font-size: 40px;
+    line-height: 48px;
+    letter-spacing: -1.44px;
+    font-weight: 400;
+}
+.containerInfoDetails .infoDetails__divTitle__divPrice {
+    display: flex;
+    align-items: end;
+    margin: 10px 0;
+}
+.containerInfoDetails .infoDetails__divTitle__divPrice__price {
+    font-family: "Archivo", sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 43px;
+    color: rgb(190, 173, 142);
+}
+.containerInfoDetails .infoDetails__divTitle__divPrice__priceText {
+    margin-bottom: 7px;
+    color: rgb(190, 173, 142);
+}
+.containerInfoDetails .infoDetails__img {
+    width: 100%;
+}
+.containerInfoDetails .CheckAvailability {
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    max-width: 300px;
+    margin: 0 auto;
+    font-family: "Archivo", sans-serif;
+    font-weight: 700;
+    line-height: 15.23px;
+    width: 100%;
+    height: 335px;
+}
+.containerInfoDetails .CheckAvailability h3 {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+.containerInfoDetails .CheckAvailability label {
+    font-family: "roboto", sans-serif;
+    line-height: 16px;
+    width: 100%;
+}
+.containerInfoDetails .CheckAvailability input {
+    display: flex;
+    width: 100%;
+    background-color: rgb(248, 248, 248);
+    border: none;
+    border-bottom: 2px solid rgb(190, 173, 142);
+    padding: 16px 32px 16px 16px;
+    color: rgb(104, 104, 104);
+    outline: none;
+    margin: 10px 0 32px;
+    letter-spacing: 1px;
+    font-family: "roboto", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+}
+.containerInfoDetails .CheckAvailability ::-webkit-calendar-picker-indicator {
+    position: absolute;
+    left: 0;
+    cursor: pointer;
+    width: 88%;
+    margin-left: 15px;
+    opacity: 0;
+}
+.containerInfoDetails .CheckAvailability__checkIn {
+    position: absolute;
+    right: 16px;
+    top: 96px;
+    pointer-events: none;
+    font-size: 14px;
+    width: 20px;
+}
+.containerInfoDetails .CheckAvailability__checkOut {
+    position: absolute;
+    right: 16px;
+    bottom: 110px;
+    pointer-events: none;
+    font-size: 14px;
+    width: 20px;
+}
+.containerInfoDetails .CheckAvailability button {
+    background-color: rgb(190, 173, 142);
+    border: none;
+    color: rgb(255, 255, 255);
+    height: 60px;
+    font-family: "Archivo", sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 15px;
+    letter-spacing: 2.8px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.textInfoRoom {
+    margin: 40px auto;
+    max-width: 500px;
+}
+.textInfoRoom__info {
+    font-family: "roboto", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    color: rgb(119, 119, 119);
+    max-width: 770px;
+}
+
+.amenitiesRoom__container {
+    max-width: 500px;
+    margin: 0 auto;
+}
+.amenitiesRoom__container__title {
+    font-family: "Old Standard TT", sans-serif;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 30px;
+}
+.amenitiesRoom__container__div {
+    border-top: 1px solid rgb(241, 241, 241);
+    font-family: "Roboto", sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 17.58px;
+    color: rgb(119, 119, 119);
+}
+.amenitiesRoom__container__div__icons {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.amenitiesRoom__container li {
+    list-style: none;
+    display: flex;
+    margin: 10px 0;
+}
+.amenitiesRoom__container p {
+    font-family: "Roboto", sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 17.58px;
+    color: rgb(119, 119, 119);
+    margin-left: 10px;
+}
+
+.founder {
+    margin: 0 auto;
+    max-width: 370px;
+}
+.founder__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 70px 0;
+    text-align: center;
+    gap: 13px;
+    max-width: 370px;
+}
+.founder__card__containerImg {
+    position: relative;
+    width: 150px;
+    height: 150px;
+}
+.founder__card__containerImg__divSvg {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.founder__card__containerImg__img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    box-shadow: 0px 0px 16px -4px rgb(190, 173, 142);
+}
+.founder__card h1 {
+    font-family: "Old Standard TT", sans-serif;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: -0.89px;
+    margin-top: 18px;
+}
+.founder__card h3 {
+    font-family: "Archivo", sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 15.23px;
+    letter-spacing: 2.79px;
+    color: rgb(189, 172, 141);
+}
+.founder__card p {
+    font-family: "Archivo", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: rgb(119, 119, 119);
+    margin-top: 10px;
+}
+
+.cancelation--container {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.cancelation {
+    max-width: 770px;
+    margin: 0 auto;
+}
+.cancelation__title {
+    font-family: "Old Standard TT", sans-serif;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 30px;
+    color: rgb(34, 34, 34);
+}
+.cancelation__divText {
+    border-top: 1px solid rgb(241, 241, 241);
+    margin: 18px 0;
+    padding-top: 30px;
+}
+.cancelation__divText__p {
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: rgb(119, 119, 119);
+}
+
+.relatedRooms {
+    position: relative;
+    margin: 80px auto;
+    max-width: 500px;
+}
+.relatedRooms .divRelatedTitle {
+    border-bottom: 1px solid rgb(241, 241, 241);
+    margin-bottom: 30px;
+}
+.relatedRooms .related--title {
+    font-size: 30px;
+    line-height: 30px;
+    margin-bottom: 12px;
+}
+.relatedRooms .relatedRoom--icons {
+    top: -25px;
+}
+
+@media only screen and (min-width: 1000px) {
+    .containerInfoDetails {
+        flex-direction: row;
+        gap: 60px;
+        max-width: 1138px;
+    }
+    .containerInfoDetails .infoDetails__subTitle {
+        padding-left: 20px;
+    }
+    .containerInfoDetails .infoDetails__divTitle {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0 20px;
+        background-color: #ffffff;
+        margin: 0 30px 0 0;
+        box-shadow: 6px 0px 10px -5px rgba(187, 187, 187, 0.4705882353);
+    }
+    .containerInfoDetails .infoDetails__img {
+        position: relative;
+        top: 0;
+        top: -35px;
+        z-index: -1;
+    }
+    .textInfoRoom {
+        max-width: 1138px;
+    }
+    .amenitiesRoom {
+        max-width: 1138px;
+        margin: 0 auto;
+    }
+    .amenitiesRoom__container {
+        max-width: 900px;
+        margin: 40px;
+    }
+    .amenitiesRoom__container__div__icons {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .founder {
+        max-width: 1138px;
+        margin: 0 auto;
+    }
+    .founder__card {
+        box-shadow: 0px 14px 24px 0px rgba(190, 173, 142, 0.2705882353);
+        padding: 60px 40px;
+    }
+    .cancelation--container {
+        max-width: 1138px;
+    }
+    .cancelation {
+        max-width: 770px;
+        margin: 0;
+    }
+    .relatedRooms {
+        max-width: 1138px;
+        margin: 80px auto;
+    }
+    .relatedRooms .roomsHome {
+        max-width: 770px;
+    }
+}
+.slider {
+    text-align: center;
+}
+.slider .swiperRoomsRoom .swiper-button-next {
+    top: 120px;
+    right: 2px;
+    background-color: rgb(190, 173, 142);
+    color: rgb(255, 255, 255);
+    width: 32px;
+    height: 32px;
+}
+.slider .swiperRoomsRoom .swiper-button-prev {
+    top: 120px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(17, 17, 17);
+    width: 32px;
+    height: 32px;
+    left: 2px;
+}
+.slider .swiperRoomsRoom ::after {
+    font-size: x-small;
+}
+.slider .swiperRoomsRoom .imgSlideRoom {
+    width: 100%;
+    height: 218px;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+.slider .swiperRoomsRoom .swiper-slide .minimal {
+    background-color: rgb(255, 255, 255);
+    position: relative;
+}
+.slider .swiperRoomsRoom .swiper-slide .minimal__title {
+    font-family: "Old Standard TT", serif;
+    font-size: 56px;
+    line-height: 60px;
+    letter-spacing: -1.2px;
+    margin-bottom: 38px;
+    color: rgb(34, 34, 34);
+    font-size: 24px;
+    line-height: 24px;
+    margin-bottom: 12px;
+}
+.slider .swiperRoomsRoom .swiper-slide .minimal__subTitle {
+    font-family: "roboto", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    color: rgb(119, 119, 119);
+    line-height: 24px;
+    margin-bottom: 12px;
+}
+.slider .swiperRoomsRoom .swiper-slide .minimal__divPrice {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.slider .swiperRoomsRoom .swiper-slide .minimal__divPrice__price {
+    font-family: "Archivo", sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 43px;
+    color: rgb(190, 173, 142);
+    font-size: 16px;
+    line-height: 17.41px;
+}
+.slider .swiperRoomsRoom .swiper-slide .minimal__divPrice__booking {
+    font-family: "Archivo", sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 2.8px;
+    line-height: 18px;
+    margin-bottom: 38px;
+    color: #bdbdbd;
+    letter-spacing: 0;
+    text-decoration: none;
+}
+
+@media only screen and (min-width: 1000px) {
+    .slider .swiperRoomsRoom .swiper-wrapper {
+        gap: 20px;
+    }
+}
+.textArchivo {
+    font-family: "Archivo", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: rgb(119, 119, 119);
+}
+
+.title {
+    font-family: "Old Standard TT", serif;
+    font-size: 56px;
+    font-weight: 400;
+    line-height: 60px;
+    letter-spacing: -1.2px;
+    color: rgb(34, 34, 34);
+}
+
+.subTitle {
+    font-family: "Archivo", sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 15.23px;
+    letter-spacing: 2.79px;
+    color: rgb(119, 119, 119);
+}
+
+.subTitleRoboto {
+    font-family: "roboto", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    color: rgb(34, 34, 34);
+}
+
+.offersPage {
+    margin: 40px 0px;
+}
+
+.containerOffer {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.offer {
+    box-shadow: 0px 14px 24px 0px rgba(184, 184, 184, 0.1);
+    margin: 30px 20px;
+    max-width: 500px;
+}
+.offer__divImg {
+    position: relative;
+}
+.offer__divImg__img {
+    width: 100%;
+}
+.offer__divPrices {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    position: relative;
+    right: 15px;
+    bottom: 16px;
+    font-family: "Archivo", sans-serif;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin: -56px 0 0 0;
+}
+.offer__divPrices__old {
+    display: flex;
+    color: rgb(192, 166, 116);
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+.offer__divPrices__old__number {
+    font-size: 23px;
+    text-decoration: line-through;
+}
+.offer__divPrices__old__text {
+    font-size: 11px;
+    line-height: 20px;
+}
+.offer__divPrices__new {
+    display: flex;
+    color: rgb(224, 61, 99);
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+.offer__divPrices__new__number {
+    font-size: 30px;
+}
+.offer__divPrices__new__text {
+    font-size: 12px;
+    line-height: 20px;
+}
+
+.descriptionOffer {
+    margin: 10px 20px;
+}
+.descriptionOffer__title .title--descriptionOffer {
+    font-size: 40px;
+    line-height: 48px;
+    letter-spacing: -1.4px;
+    color: rgb(34, 34, 34);
+    margin: 16px 0;
+}
+.descriptionOffer__button {
+    background-color: rgb(189, 172, 141);
+    border: none;
+    color: rgb(255, 255, 255);
+    height: 60px;
+    font-family: "Archivo", sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 15px;
+    letter-spacing: 2.8px;
+    cursor: pointer;
+    width: 216px;
+    height: 60px;
+    margin: 10px 0 32px 0;
+}
+.descriptionOffer .containerText__text {
+    font-family: "roboto", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    color: rgb(119, 119, 119);
+}
+.descriptionOffer .containerText .divAmenitiesOffer {
+    border: none;
+    margin: 0;
+}
+
+.popularRooms {
+    background-color: rgb(34, 34, 34);
+    padding: 40px 20px 10px;
+    margin: 50px 0;
+}
+.popularRooms__div {
+    text-align: center;
+}
+.popularRooms__div__subTitle {
+    font-family: "Archivo", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 15.23px;
+    letter-spacing: 2.79px;
+    color: rgb(189, 172, 141);
+}
+.popularRooms__div__title {
+    font-family: "Old Standard TT", sans-serif;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 48px;
+    letter-spacing: -0.8px;
+    color: rgb(255, 255, 255);
+    margin: 20px 0 40px 0;
+}
+.popularRooms .relatedRoom--icons {
+    top: -25px;
+}
+.popularRooms .minimal--popularoffer {
+    bottom: 44px;
+    background-color: rgb(255, 255, 255) !important;
+    padding: 45px 20px 30px 20px;
+}
+
+@media only screen and (min-width: 1000px) {
+    .offersPage {
+        margin: 80px 0px 40px 0px;
+    }
+    .containerOffer {
+        max-width: 1138px;
+    }
+    .offer {
+        max-width: 1138px;
+    }
+    .offer__divImg {
+        z-index: -1;
+    }
+    .offer__divPrices {
+        right: 110px;
+        bottom: -18px;
+        margin: 0px 0 0 0;
+        gap: 10px;
+    }
+    .offer__divPrices__old__number {
+        font-size: 28px;
+    }
+    .offer__divPrices__old__text {
+        font-size: 12px;
+    }
+    .offer__divPrices__new__number {
+        font-size: 40px;
+    }
+    .offer__divPrices__new__text {
+        font-size: 16px;
+    }
+    .descriptionOffer {
+        background-color: #ffffff;
+        z-index: 1;
+        margin: -120px 50px 0;
+        padding: 50px;
+        border-top: 7px solid #bdac8d;
+    }
+    .descriptionOffer__title .title--descriptionOffer {
+        font-size: 48px;
+    }
+    .descriptionOffer .containerText {
+        display: flex;
+        justify-content: space-between;
+        gap: 60px;
+        border-top: 4px solid rgba(224, 224, 224, 0.431372549);
+        padding-top: 40px;
+        margin-top: 30px;
+    }
+    .descriptionOffer .containerText__text {
+        width: 50%;
+    }
+    .descriptionOffer .containerText .amenitiesRoom--container {
+        margin: 0;
+    }
+    .descriptionOffer .containerText .gridIcon--offer {
+        grid-template-columns: repeat(2, 1fr);
+        margin: 0;
+    }
+    .descriptionOffer .containerText .amenitiesRoom--offer {
+        margin: 0;
+        width: 50%;
+    }
+    .descriptionOffer__button {
+        margin: -10px 0 10px 0;
+    }
+}
+.slider {
+    text-align: center;
+}
+.slider .swiperOfferRoom {
+    max-width: 500px;
+}
+.slider .swiperOfferRoom .swiper-button-next {
+    top: 120px;
+    right: 2px;
+    background-color: rgb(190, 173, 142);
+    color: rgb(255, 255, 255);
+    width: 32px;
+    height: 32px;
+}
+.slider .swiperOfferRoom .swiper-button-prev {
+    top: 120px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(17, 17, 17);
+    width: 32px;
+    height: 32px;
+    left: 2px;
+}
+.slider .swiperOfferRoom ::after {
+    font-size: x-small;
+}
+.slider .swiperOfferRoom .imgSlideRoom {
+    width: 100%;
+    height: 218px;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+.slider .swiperOfferRoom .swiper-slide .minimal {
+    background-color: rgb(255, 255, 255);
+    position: relative;
+}
+.slider .swiperOfferRoom .swiper-slide .minimal__title {
+    font-family: "Old Standard TT", serif;
+    font-size: 56px;
+    line-height: 60px;
+    letter-spacing: -1.2px;
+    margin-bottom: 38px;
+    color: rgb(34, 34, 34);
+    font-size: 24px;
+    line-height: 24px;
+    margin-bottom: 12px;
+}
+.slider .swiperOfferRoom .swiper-slide .minimal__subTitle {
+    font-family: "roboto", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    color: rgb(119, 119, 119);
+    line-height: 24px;
+    margin-bottom: 12px;
+}
+.slider .swiperOfferRoom .swiper-slide .minimal__divPrice {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.slider .swiperOfferRoom .swiper-slide .minimal__divPrice__price {
+    font-family: "Archivo", sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 43px;
+    color: rgb(190, 173, 142);
+    font-size: 16px;
+    line-height: 17.41px;
+}
+.slider .swiperOfferRoom .swiper-slide .minimal__divPrice__booking {
+    font-family: "Archivo", sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 2.8px;
+    line-height: 18px;
+    margin-bottom: 38px;
+    color: #bdbdbd;
+    letter-spacing: 0;
+    text-decoration: none;
+    margin-bottom: 0;
+}
+
+@media only screen and (min-width: 1000px) {
+    .slider .swiperOfferRoom {
+        max-width: 1138px;
+    }
+    .slider .swiperOfferRoom .swiper-wrapper {
+        gap: 20px;
+    }
+}
+.textArchivo {
+    font-family: "Archivo", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: rgb(119, 119, 119);
+}
+
+.title {
+    font-family: "Old Standard TT", serif;
+    font-size: 56px;
+    font-weight: 400;
+    line-height: 60px;
+    letter-spacing: -1.2px;
+    color: rgb(34, 34, 34);
+}
+
+.subTitle {
+    font-family: "Archivo", sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 15.23px;
+    letter-spacing: 2.79px;
+    color: rgb(119, 119, 119);
+}
+
+.subTitleRoboto {
+    font-family: "roboto", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    color: rgb(34, 34, 34);
+}
+
+.contactPage {
+    margin: 20px 20px;
+}
+.contactPage__divImg {
+    max-width: 500px;
+    margin: 0 auto;
+}
+.contactPage__divImg__imgMap {
+    width: 100%;
+    margin: 20px 0 30px 0;
+}
+
+.hotelDetails {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.detail {
+    position: relative;
+}
+.detail__number {
+    font-family: "roboto", sans-serif;
+    font-size: 200px;
+    font-weight: 700;
+    letter-spacing: -6px;
+    color: rgb(248, 248, 248);
+    text-align: end;
+}
+.detail__info {
+    position: absolute;
+    top: 63px;
+    display: flex;
+    padding-left: 10px;
+    align-items: start;
+}
+.detail__info__address {
+    padding: 0 40px 0 30px;
+}
+.detail__info__address__title {
+    font-family: "Old Standard TT", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+    color: rgb(34, 34, 34);
+    margin-bottom: 20px;
+}
+.detail__info__address__text {
+    font-family: "roboto", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.41px;
+    color: rgb(119, 119, 119);
+    margin: 5px 0;
+}
+
+.formContact {
+    text-align: center;
+    max-width: 500px;
+    margin: 0 auto;
+}
+.formContact__containerInput__two__div {
+    position: relative;
+    width: 100%;
+    margin: 20px 0;
+}
+.formContact__containerInput__two__div__text {
+    background-color: rgb(248, 248, 248);
+    width: 100%;
+    padding: 20px 0 20px 50px;
+    border: none;
+    outline: none;
+}
+.formContact__containerInput__two__div__number {
+    background-color: rgb(248, 248, 248);
+    width: 100%;
+    padding: 20px 0 20px 50px;
+    border: none;
+    outline: none;
+}
+.formContact__containerInput__two__div__email {
+    background-color: rgb(248, 248, 248);
+    width: 100%;
+    padding: 20px 0 20px 50px;
+    border: none;
+    outline: none;
+}
+.formContact__containerInput__two__div__svg {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+}
+.formContact__div {
+    position: relative;
+    width: 100%;
+    margin: 20px 0;
+}
+.formContact__div__svg {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+}
+.formContact__div__text {
+    background-color: rgb(248, 248, 248);
+    width: 100%;
+    padding: 20px 0 20px 50px;
+    border: none;
+    outline: none;
+}
+.formContact__div .message {
+    background-color: rgb(248, 248, 248);
+    width: 100%;
+    height: 150px;
+    border: none;
+}
+.formContact__div .message::-moz-placeholder {
+    font-family: sans-serif;
+}
+.formContact__div .message::placeholder {
+    font-family: sans-serif;
+}
+.formContact .buttonFormContact {
+    width: 258px;
+    height: 60px;
+    margin: 20px 0 40px;
+    background-color: rgb(190, 173, 142);
+    border: none;
+    color: rgb(255, 255, 255);
+    height: 60px;
+    font-family: "Archivo", sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 15px;
+    letter-spacing: 2.8px;
+    cursor: pointer;
+}
+
+@media only screen and (min-width: 1000px) {
+    .contactPage__divImg {
+        max-width: 1138px;
+    }
+    .hotelDetails {
+        flex-direction: row;
+        justify-content: space-between;
+        max-width: 1138px;
+        padding: 0 20px;
+    }
+    .formContact {
+        max-width: 1000px;
+    }
+    .formContact__containerInput {
+        display: flex;
+        gap: 20px;
+    }
+    .formContact__containerInput__two {
+        width: 100%;
+    }
+    .formContact__containerInput__two__div {
+        position: relative;
+        width: 100%;
+        margin: 20px 0;
+    }
+    .formContact__containerInput__two__div__text {
+        background-color: rgb(248, 248, 248);
+        width: 100%;
+        padding: 20px 0 20px 50px;
+        border: none;
+        outline: none;
+    }
+    .formContact__containerInput__two__div__number {
+        background-color: rgb(248, 248, 248);
+        width: 100%;
+        padding: 20px 0 20px 50px;
+        border: none;
+        outline: none;
+    }
+    .formContact__containerInput__two__div__email {
+        background-color: rgb(248, 248, 248);
+        width: 100%;
+        padding: 20px 0 20px 50px;
+        border: none;
+        outline: none;
+    }
+    .formContact__containerInput__two__div__svg {
+        position: absolute;
+        left: 20px;
+        top: 20px;
+    }
+    .formContact__div {
+        position: relative;
+        width: 100%;
+        margin: 20px 0;
+    }
+    .formContact__div__svg {
+        position: absolute;
+        left: 20px;
+        top: 20px;
+    }
+    .formContact__div__text {
+        background-color: rgb(248, 248, 248);
+        width: 100%;
+        padding: 20px 0 20px 50px;
+        border: none;
+        outline: none;
+    }
+    .formContact__div .message {
+        background-color: rgb(248, 248, 248);
+        width: 100%;
+        height: 150px;
+        border: none;
+    }
+    .formContact__div .message::-moz-placeholder {
+        font-family: sans-serif;
+    }
+    .formContact__div .message::placeholder {
+        font-family: sans-serif;
+    }
+    .formContact .buttonFormContact {
+        width: 258px;
+        height: 60px;
+        margin: 20px 0 40px;
+        background-color: rgb(190, 173, 142);
+        border: none;
+        color: rgb(255, 255, 255);
+        height: 60px;
+        font-family: "Archivo", sans-serif;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 15px;
+        letter-spacing: 2.8px;
+        cursor: pointer;
+    }
+}
+html,
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-width: 320px;
+} /*# sourceMappingURL=styles.css.map */
