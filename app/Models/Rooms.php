@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\RoomsImages;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
@@ -24,8 +25,15 @@ class Rooms extends Model
         return $this->belongsToMany(Amenities::class, 'rooms_amenities', 'room_id', 'amenity_id');
     }
 
-    public function images() : HasMany
+    public function Images() : BelongsToMany
     {
-        return $this->hasMany(RoomsImages::class, 'room_id');
+        return $this->BelongsToMany(Images::class);
     }
+
+    // public function getImages(){
+
+    //      $image = roomsImages();
+
+    //      return $image->image_id;
+    // }
 }

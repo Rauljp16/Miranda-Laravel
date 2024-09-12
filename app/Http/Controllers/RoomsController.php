@@ -10,8 +10,10 @@ class RoomsController extends Controller
 {
     public function index()
     {
-        $rooms = Rooms::with('images')->get(); 
-        return view('rooms.rooms', compact('rooms'));
+        $rooms = Rooms::all();
+
+        //$rooms = Rooms::with('images')->get(); 
+        return view('rooms.rooms',["rooms" => $rooms]);
     }
 }
 

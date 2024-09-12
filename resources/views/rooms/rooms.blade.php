@@ -70,7 +70,7 @@
     <div class="CardContainer">
     @foreach($rooms as $room)
       <article class="roomcard">
-        <img class="roomcard__img" src="{{ $room->images->first()->filename ?? 'default.jpg' }}" alt="habitacion hotel" />
+        <img class="roomcard__img" src="{{ $room->images }}" alt="habitacion hotel" />
         <div class="roomcard__icons">
           <img src="./svg/bed.svg" alt="bed" />
           <img src="./svg/wifi.svg" alt="wifi" />

@@ -4,17 +4,23 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use App\Models\Images;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
-class Rooms_Images extends Model
+
+class RoomsImages extends Model
 {
     use HasFactory;
 
-    protected $table = 'rooms_images';
-    protected $fillable = ['room_id', 'image_id'];
+    //protected $fillable = ['room_id', 'image_id'];
 
-    public function image() : BelongsTo
-    {
-        return $this->belongsTo(Rooms::class, 'room_id');
-    }
+    // public function rooms() : HasMany
+    // {
+    //     return $this->hasMany(Rooms::class);
+    // }
+
+    // public function images() : HasMany
+    // {
+    //     return $this->hasMany(Images::class);
+    // }
 }
