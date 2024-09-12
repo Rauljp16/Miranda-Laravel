@@ -10,8 +10,8 @@ class Images extends Model
 {
     use HasFactory;
     
-    public function roomsImages() : BelongsTo
+    public function roomsImages() : BelongsToMany
     {
-        return $this->belongsTo(RoomsImages::class);
+        return $this->belongsToamany(RoomsImages::class);
     }
 }

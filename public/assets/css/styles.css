@@ -1969,13 +1969,15 @@ footer .copyright__container p {
 
 .CardContainer {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
     max-width: 1138px;
     margin: 0 auto;
 }
 .CardContainer .roomcard {
     position: relative;
     display: flex;
+    flex: 0 1 calc(33.333% - 10px);
     flex-direction: column;
     align-items: center;
     margin: 40px auto;
