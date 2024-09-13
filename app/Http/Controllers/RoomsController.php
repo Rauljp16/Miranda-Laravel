@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Models\Rooms;
-use App\Models\RoomsImages; 
 use Illuminate\Http\Request;
 
 class RoomsController extends Controller
@@ -15,10 +14,13 @@ class RoomsController extends Controller
         return view('rooms.rooms',["rooms" => $rooms]);
     }
     
-    // public function show(Rooms $rooms)
-    // {
-    //     return view('rooms.rooms',["rooms" => $rooms]);
-    // }
+    public function show($id)
+{
+    $room = Rooms::with(['roomType', 'amenities', 'images'])->findOrFail($id);
+    
+    return view('rooms.roomDetails', compact('room'));
+}
+
 }
 
  

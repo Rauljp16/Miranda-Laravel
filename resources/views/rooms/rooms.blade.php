@@ -87,9 +87,8 @@
             eiusmod tempor incididunt ut labore et dolore.
           </p>
           <div class="roomcard__minimal__divPrice">
-            <p class="roomcard__minimal__divPrice__price">$345/Night</p>
-            <a class="roomcard__minimal__divPrice__booking" href="/roomDetails" onclick="toggleMenu()">Booking
-              Now</a>
+            <p class="roomcard__minimal__divPrice__price">${{$room->OfferPrice}}/Night</p>
+            <a class="roomcard__minimal__divPrice__booking" href="{{ route('roomDetails', $room->id) }}" onclick="toggleMenu()">Booking Now</a> 
           </div>
         </div>
       </article>
@@ -97,7 +96,7 @@
     </div>
     
     
-    <article class="pagination">
+    <!-- <article class="pagination">
       <div class="pagination__number">
         << </div>
           <div class="pagination__number"> 1 </div>
@@ -106,7 +105,7 @@
           <div class="pagination__number"> ... </div>
           <div class="pagination__number"> 10 </div>
           <div class="pagination__number"> >> </div>
-    </article>
+    </article> -->
   </section>
 
   <footer>

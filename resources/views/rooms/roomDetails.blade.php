@@ -24,7 +24,7 @@
     <div class="divHeaderDesktop" id="divHeaderDesktop">
       <header class="header">
         <nav>
-          <img id="menuBurguerSvg" src="./svg/menuBurguer.svg" class="header__menuBurguerSvg" alt="menu burguer" />
+          <img id="menuBurguerSvg" src="../svg/menuBurguer.svg" class="header__menuBurguerSvg" alt="menu burguer" />
           <section class="header__logo">
             <a href="/" class="iconLogo">H</a>
             <div class="nameHotel">
@@ -48,8 +48,8 @@
             </li>
           </ul>
           <section class="header__iconSvg">
-            <img src="./svg/account.svg" class="header__iconSvg__accountSvg" alt="account" />
-            <img src="./svg/search.svg" class="header__iconSvg__searchSvg" alt="search" />
+            <img src="../svg/account.svg" class="header__iconSvg__accountSvg" alt="account" />
+            <img src="../svg/search.svg" class="header__iconSvg__searchSvg" alt="search" />
           </section>
         </nav>
       </header>
@@ -69,23 +69,23 @@
   <section class="roomDetails">
     <div class="containerInfoDetails">
       <section class="infoDetails">
-        <h3 class="infoDetails__subTitle">DOUBLE BED</h3>
+        <h3 class="infoDetails__subTitle">{{$room->roomType->room_type}}</h3>
         <div class="infoDetails__divTitle">
-          <h1 class="infoDetails__divTitle__title">Luxury Double Bed</h1>
+          <h1 class="infoDetails__divTitle__title">Luxury {{$room->roomType->room_type}}</h1>
           <div class="infoDetails__divTitle__divPrice">
-            <p class="infoDetails__divTitle__divPrice__price">$345</p>
+            <p class="infoDetails__divTitle__divPrice__price">${{$room->OfferPrice}}</p>
             <p class="infoDetails__divTitle__divPrice__priceText">/night</p>
           </div>
         </div>
-        <img class="infoDetails__img" src="./images/4.webp" alt="habitacion hotel" />
+        <img class="infoDetails__img" src="{{  $room->images->first()->image_url }}" alt="habitacion hotel" />
       </section>
       <section class="CheckAvailability">
         <h3 class="CheckAvailability__title">Check Availability</h3>
         <label>Check In</label>
-        <img src="./svg/calendar.svg" class="CheckAvailability__checkIn" alt="account" />
+        <img src="../svg/calendar.svg" class="CheckAvailability__checkIn" alt="account" />
         <input type="date" />
         <label>Check Out</label>
-        <img src="./svg/calendar.svg" class="CheckAvailability__checkOut" alt="account" />
+        <img src="../svg/calendar.svg" class="CheckAvailability__checkOut" alt="account" />
         <input type="date" />
         <button>CHECK AVAILABILITY</button>
       </section>
@@ -115,59 +115,59 @@
         <div class="amenitiesRoom__container__div">
           <article class="amenitiesRoom__container__div__icons">
             <li>
-              <img src="./svg/amenitiesRoom/airConditioner.svg" alt="air Conditioner" />
+              <img src="../svg/amenitiesRoom/airConditioner.svg" alt="air Conditioner" />
               <p>Air conditioner</p>
             </li>
             <li>
-              <img src="./svg/amenitiesRoom/breakfast.svg" alt="breakfast" />
+              <img src="../svg/amenitiesRoom/breakfast.svg" alt="breakfast" />
               <p>Breakfast</p>
             </li>
             <li>
-              <img src="./svg/amenitiesRoom/cleaning.svg" alt="cleaning" />
+              <img src="../svg/amenitiesRoom/cleaning.svg" alt="cleaning" />
               <p>Cleaning</p>
             </li>
             <li>
-              <img src="./svg/amenitiesRoom/grocery.svg" alt="grocery" />
+              <img src="../svg/amenitiesRoom/grocery.svg" alt="grocery" />
               <p>Grocery</p>
             </li>
             <li>
-              <img src="./svg/amenitiesRoom/shopNear.svg" alt="shop Near" />
+              <img src="../svg/amenitiesRoom/shopNear.svg" alt="shop Near" />
               <p>Shop near</p>
             </li>
             <li>
-              <img src="./svg/amenitiesRoom/support.svg" alt="support" />
+              <img src="../svg/amenitiesRoom/support.svg" alt="support" />
               <p>24/7 Online Support</p>
             </li>
             <li>
-              <img src="./svg/amenitiesRoom/smartSecurity.svg" alt="smart Security" />
+              <img src="../svg/amenitiesRoom/smartSecurity.svg" alt="smart Security" />
               <p>Smart Security</p>
             </li>
             <li>
-              <img src="./svg/amenitiesRoom/wifi.svg" alt="wifi" />
+              <img src="../svg/amenitiesRoom/wifi.svg" alt="wifi" />
               <p>High speed WiFi</p>
             </li>
             <li>
-              <img src="./svg/amenitiesRoom/kitchen.svg" alt="kitchen" />
+              <img src="../svg/amenitiesRoom/kitchen.svg" alt="kitchen" />
               <p>Kitchen</p>
             </li>
             <li>
-              <img src="./svg/amenitiesRoom/shower.svg" alt="shower" />
+              <img src="../svg/amenitiesRoom/shower.svg" alt="shower" />
               <p>Shower</p>
             </li>
             <li>
-              <img src="./svg/amenitiesRoom/singleBed.svg" alt="singleBed" />
+              <img src="../svg/amenitiesRoom/singleBed.svg" alt="singleBed" />
               <p>Single bed</p>
             </li>
             <li>
-              <img src="./svg/amenitiesRoom/towels.svg" alt="towels" />
+              <img src="../svg/amenitiesRoom/towels.svg" alt="towels" />
               <p>Towels</p>
             </li>
             <li>
-              <img src="./svg/amenitiesRoom/strongLocker.svg" alt="strong Locker" />
+              <img src="../svg/amenitiesRoom/strongLocker.svg" alt="strong Locker" />
               <p>Strong Locker</p>
             </li>
             <li>
-              <img src="./svg/amenitiesRoom/expertTeam.svg" alt="expert Team" />
+              <img src="../svg/amenitiesRoom/expertTeam.svg" alt="expert Team" />
               <p>Expert Team</p>
             </li>
           </article>
@@ -177,9 +177,9 @@
     <section class="founder">
       <div class="founder__card">
         <div class="founder__card__containerImg">
-          <img class="founder__card__containerImg__img" src="./images/founder.webp" alt="habitacion hotel" />
+          <img class="founder__card__containerImg__img" src="../images/founder.webp" alt="habitacion hotel" />
           <div class="founder__card__containerImg__divSvg">
-            <img src="./svg/amenitiesRoom/test.svg" alt="air Conditioner" />
+            <img src="../svg/amenitiesRoom/test.svg" alt="air Conditioner" />
           </div>
         </div>
         <h1>Rosalina D. William</h1>
@@ -213,15 +213,15 @@
             <div class="swiper-wrapper">
               <!-- Slides -->
               <div class="swiper-slide">
-                <img class="imgSlideRoom" src="./images/4.webp" alt="habitacion hotel" />
+                <img class="imgSlideRoom" src="../images/4.webp" alt="habitacion hotel" />
                 <div class="roomsHome__icons relatedRoom--icons">
-                  <img src="./svg/bed.svg" alt="bed" />
-                  <img src="./svg/wifi.svg" alt="wifi" />
-                  <img src="./svg/car.svg" alt="car" />
-                  <img src="./svg/cold.svg" alt="cold" />
-                  <img src="./svg/gym.svg" alt="gym" />
-                  <img src="./svg/smoking.svg" alt="smoking" />
-                  <img src="./svg/cocktail.svg" alt="cocktail" />
+                  <img src="../svg/bed.svg" alt="bed" />
+                  <img src="../svg/wifi.svg" alt="wifi" />
+                  <img src="../svg/car.svg" alt="car" />
+                  <img src="../svg/cold.svg" alt="cold" />
+                  <img src="../svg/gym.svg" alt="gym" />
+                  <img src="../svg/smoking.svg" alt="smoking" />
+                  <img src="../svg/cocktail.svg" alt="cocktail" />
                 </div>
                 <div class="minimal">
                   <p class="minimal__title">Minimal Duplex Room</p>
@@ -237,15 +237,15 @@
                 </div>
               </div>
               <div class="swiper-slide">
-                <img class="imgSlideRoom" src="./images/3.webp" alt="habitacion hotel" />
+                <img class="imgSlideRoom" src="../images/3.webp" alt="habitacion hotel" />
                 <div class="roomsHome__icons relatedRoom--icons">
-                  <img src="./svg/bed.svg" alt="bed" />
-                  <img src="./svg/wifi.svg" alt="wifi" />
-                  <img src="./svg/car.svg" alt="car" />
-                  <img src="./svg/cold.svg" alt="cold" />
-                  <img src="./svg/gym.svg" alt="gym" />
-                  <img src="./svg/smoking.svg" alt="smoking" />
-                  <img src="./svg/cocktail.svg" alt="cocktail" />
+                  <img src="../svg/bed.svg" alt="bed" />
+                  <img src="../svg/wifi.svg" alt="wifi" />
+                  <img src="../svg/car.svg" alt="car" />
+                  <img src="../svg/cold.svg" alt="cold" />
+                  <img src="../svg/gym.svg" alt="gym" />
+                  <img src="../svg/smoking.svg" alt="smoking" />
+                  <img src="../svg/cocktail.svg" alt="cocktail" />
                 </div>
                 <div class="minimal">
                   <p class="minimal__title">Minimal Duplex Room</p>
@@ -261,15 +261,15 @@
                 </div>
               </div>
               <div class="swiper-slide">
-                <img class="imgSlideRoom" src="./images/2.webp" alt="habitacion hotel" />
+                <img class="imgSlideRoom" src="../images/2.webp" alt="habitacion hotel" />
                 <div class="roomsHome__icons relatedRoom--icons">
-                  <img src="./svg/bed.svg" alt="bed" />
-                  <img src="./svg/wifi.svg" alt="wifi" />
-                  <img src="./svg/car.svg" alt="car" />
-                  <img src="./svg/cold.svg" alt="cold" />
-                  <img src="./svg/gym.svg" alt="gym" />
-                  <img src="./svg/smoking.svg" alt="smoking" />
-                  <img src="./svg/cocktail.svg" alt="cocktail" />
+                  <img src="../svg/bed.svg" alt="bed" />
+                  <img src="../svg/wifi.svg" alt="wifi" />
+                  <img src="../svg/car.svg" alt="car" />
+                  <img src="../svg/cold.svg" alt="cold" />
+                  <img src="../svg/gym.svg" alt="gym" />
+                  <img src="../svg/smoking.svg" alt="smoking" />
+                  <img src="../svg/cocktail.svg" alt="cocktail" />
                 </div>
                 <div class="minimal">
                   <p class="minimal__title">Minimal Duplex Room</p>
@@ -285,15 +285,15 @@
                 </div>
               </div>
               <div class="swiper-slide">
-                <img class="imgSlideRoom" src="./images/1.webp" alt="habitacion hotel" />
+                <img class="imgSlideRoom" src="../images/1.webp" alt="habitacion hotel" />
                 <div class="roomsHome__icons relatedRoom--icons">
-                  <img src="./svg/bed.svg" alt="bed" />
-                  <img src="./svg/wifi.svg" alt="wifi" />
-                  <img src="./svg/car.svg" alt="car" />
-                  <img src="./svg/cold.svg" alt="cold" />
-                  <img src="./svg/gym.svg" alt="gym" />
-                  <img src="./svg/smoking.svg" alt="smoking" />
-                  <img src="./svg/cocktail.svg" alt="cocktail" />
+                  <img src="../svg/bed.svg" alt="bed" />
+                  <img src="../svg/wifi.svg" alt="wifi" />
+                  <img src="../svg/car.svg" alt="car" />
+                  <img src="../svg/cold.svg" alt="cold" />
+                  <img src="../svg/gym.svg" alt="gym" />
+                  <img src="../svg/smoking.svg" alt="smoking" />
+                  <img src="../svg/cocktail.svg" alt="cocktail" />
                 </div>
                 <div class="minimal">
                   <p class="minimal__title">Minimal Duplex Room</p>
@@ -334,19 +334,19 @@
         </p>
         <section class="rrss">
           <div>
-            <img src="./svg/facebook.svg" alt="facebook" />
+            <img src="../svg/facebook.svg" alt="facebook" />
           </div>
           <div class="rrss-gold">
-            <img src="./svg/twitter.svg" alt="twitter" />
+            <img src="../svg/twitter.svg" alt="twitter" />
           </div>
           <div>
-            <img src="./svg/behance.svg" alt="behance" />
+            <img src="../svg/behance.svg" alt="behance" />
           </div>
           <div>
-            <img src="./svg/linkedIn.svg" alt="linkedIn" />
+            <img src="../svg/linkedIn.svg" alt="linkedIn" />
           </div>
           <div>
-            <img src="./svg/youtube.svg" alt="youtube" />
+            <img src="../svg/youtube.svg" alt="youtube" />
           </div>
         </section>
       </div>
@@ -376,9 +376,9 @@
           <p class="contact__title">Contact Us.</p>
           <div class="contact__container">
             <article>
-              <img src="./svg/phone.svg" alt="phone" />
-              <img src="./svg/mail.svg" alt="mail" />
-              <img src="./svg/map.svg" alt="map" />
+              <img src="../svg/phone.svg" alt="phone" />
+              <img src="../svg/mail.svg" alt="mail" />
+              <img src="../svg/map.svg" alt="map" />
             </article>
             <article>
               <div>
