@@ -12,6 +12,6 @@ class Images extends Model
     
     public function roomsImages() : BelongsToMany
     {
-        return $this->belongsToamany(RoomsImages::class);
+        return $this->belongsToMany(RoomsImages::class);
     }
 }

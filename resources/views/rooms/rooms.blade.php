@@ -81,7 +81,7 @@
           <img src="./svg/cocktail.svg" alt="cocktail" />
         </div>
         <div class="roomcard__minimal">
-          <p class="roomcard__minimal__title">Minimal Duplex Room</p>
+          <p class="roomcard__minimal__title">{{$room->roomType->room_type}}</p>
           <p class="roomcard__minimal__subTitle">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
             eiusmod tempor incididunt ut labore et dolore.
