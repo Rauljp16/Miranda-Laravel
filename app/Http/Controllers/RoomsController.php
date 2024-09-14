@@ -21,6 +21,13 @@ class RoomsController extends Controller
     return view('rooms.roomDetails', compact('room'));
 }
 
+public function home()
+{
+    $rooms = Rooms::all();
+
+    return view('home', ["rooms" => $rooms]);
+}
+
 }
 
  

@@ -213,7 +213,7 @@
             <div class="swiper-wrapper">
               <!-- Slides -->
               <div class="swiper-slide">
-                <img class="imgSlideRoom" src="../images/4.webp" alt="habitacion hotel" />
+                <img class="imgSlideRoom" src="../images/double-superior.webp" alt="habitacion hotel" />
                 <div class="roomsHome__icons relatedRoom--icons">
                   <img src="../svg/bed.svg" alt="bed" />
                   <img src="../svg/wifi.svg" alt="wifi" />
@@ -224,13 +224,13 @@
                   <img src="../svg/cocktail.svg" alt="cocktail" />
                 </div>
                 <div class="minimal">
-                  <p class="minimal__title">Minimal Duplex Room</p>
+                  <p class="minimal__title">Double Superior</p>
                   <p class="minimal__subTitle">
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
                     do eiusmod tempor incididunt ut labore.
                   </p>
                   <div class="minimal__divPrice">
-                    <p class="minimal__divPrice__price">$345/Night</p>
+                    <p class="minimal__divPrice__price">$80/Night</p>
                     <a class="minimal__divPrice__booking" href="http://127.0.0.7:5500/room_details.html"
                       onclick="toggleMenu()">Booking Now</a>
                   </div>
@@ -248,61 +248,13 @@
                   <img src="../svg/cocktail.svg" alt="cocktail" />
                 </div>
                 <div class="minimal">
-                  <p class="minimal__title">Minimal Duplex Room</p>
+                  <p class="minimal__title">Suite</p>
                   <p class="minimal__subTitle">
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
                     do eiusmod tempor incididunt ut labore.
                   </p>
                   <div class="minimal__divPrice">
-                    <p class="minimal__divPrice__price">$345/Night</p>
-                    <a class="minimal__divPrice__booking" href="http://127.0.0.7:5500/room_details.html"
-                      onclick="toggleMenu()">Booking Now</a>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <img class="imgSlideRoom" src="../images/2.webp" alt="habitacion hotel" />
-                <div class="roomsHome__icons relatedRoom--icons">
-                  <img src="../svg/bed.svg" alt="bed" />
-                  <img src="../svg/wifi.svg" alt="wifi" />
-                  <img src="../svg/car.svg" alt="car" />
-                  <img src="../svg/cold.svg" alt="cold" />
-                  <img src="../svg/gym.svg" alt="gym" />
-                  <img src="../svg/smoking.svg" alt="smoking" />
-                  <img src="../svg/cocktail.svg" alt="cocktail" />
-                </div>
-                <div class="minimal">
-                  <p class="minimal__title">Minimal Duplex Room</p>
-                  <p class="minimal__subTitle">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
-                    do eiusmod tempor incididunt ut labore.
-                  </p>
-                  <div class="minimal__divPrice">
-                    <p class="minimal__divPrice__price">$345/Night</p>
-                    <a class="minimal__divPrice__booking" href="http://127.0.0.7:5500/room_details.html"
-                      onclick="toggleMenu()">Booking Now</a>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <img class="imgSlideRoom" src="../images/1.webp" alt="habitacion hotel" />
-                <div class="roomsHome__icons relatedRoom--icons">
-                  <img src="../svg/bed.svg" alt="bed" />
-                  <img src="../svg/wifi.svg" alt="wifi" />
-                  <img src="../svg/car.svg" alt="car" />
-                  <img src="../svg/cold.svg" alt="cold" />
-                  <img src="../svg/gym.svg" alt="gym" />
-                  <img src="../svg/smoking.svg" alt="smoking" />
-                  <img src="../svg/cocktail.svg" alt="cocktail" />
-                </div>
-                <div class="minimal">
-                  <p class="minimal__title">Minimal Duplex Room</p>
-                  <p class="minimal__subTitle">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
-                    do eiusmod tempor incididunt ut labore.
-                  </p>
-                  <div class="minimal__divPrice">
-                    <p class="minimal__divPrice__price">$345/Night</p>
+                    <p class="minimal__divPrice__price">$120/Night</p>
                     <a class="minimal__divPrice__booking" href="http://127.0.0.7:5500/room_details.html"
                       onclick="toggleMenu()">Booking Now</a>
                   </div>

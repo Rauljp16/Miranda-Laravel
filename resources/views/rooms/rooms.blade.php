@@ -94,19 +94,7 @@
       </article>
       @endforeach
     </div>
-    
-    
-    <!-- <article class="pagination">
-      <div class="pagination__number">
-        << </div>
-          <div class="pagination__number"> 1 </div>
-          <div class="pagination__number pagination--2"> 2 </div>
-          <div class="pagination__number"> 3 </div>
-          <div class="pagination__number"> ... </div>
-          <div class="pagination__number"> 10 </div>
-          <div class="pagination__number"> >> </div>
-    </article> -->
-  </section>
+    </section>
 
   <footer>
     <div class="containerFooter">

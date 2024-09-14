@@ -13,9 +13,11 @@ Route::middleware("auth")->group(function(){
     
 });
 
-Route::get('/', function(){
-    return view('home');
-});
+// Route::get('/', function(){
+//     return view('home');
+// });
+Route::get('/', [RoomsController::class, 'home']);
+
 
 Route::get('/about', function(){
     return view('about');

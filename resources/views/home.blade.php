@@ -136,85 +136,23 @@
         <!-- Additional required wrapper -->
         <div class="swiper-wrapper">
           <!-- Slides -->
+          @foreach($rooms as $room)
           <div class="swiper-slide">
-            <img class="imgSlideRoom" src="./images/4.webp" alt="habitacion hotel" />
+            <img class="imgSlideRoom" src="{{  $room->images->first()->image_url }}" alt="habitacion hotel" />
             <div class="minimal">
               <div class="divDesktop">
-                <p class="minimal__title">Minimal Room</p>
+                <p class="minimal__title">{{$room->roomType->room_type}}</p>
                 <p class="minimal__subTitle">
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                 </p>
               </div>
               <div class="container--price">
-                <p class="price">$345</p>
+                <p class="price">${{$room->OfferPrice}}</p>
                 <p class="price priceText">/night</p>
               </div>
             </div>
           </div>
-          <div class="swiper-slide">
-            <img class="imgSlideRoom" src="./images/2.webp" alt="habitacion hotel" />
-            <div class="minimal">
-              <div class="divDesktop">
-
-                <p class="minimal__title">Minimal Room</p>
-                <p class="minimal__subTitle">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                </p>
-              </div>
-              <div class="container--price">
-                <p class="price">$425</p>
-                <p class="price priceText">/night</p>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <img class="imgSlideRoom" src="./images/3.webp" alt="habitacion hotel" />
-            <div class="minimal">
-              <div class="divDesktop">
-
-                <p class="minimal__title">Double Room</p>
-                <p class="minimal__subTitle">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                </p>
-              </div>
-              <div class="container--price">
-                <p class="price">$425</p>
-                <p class="price priceText">/night</p>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <img class="imgSlideRoom" src="./images/1.webp" alt="habitacion hotel" />
-            <div class="minimal">
-              <div class="divDesktop">
-
-                <p class="minimal__title">Single Room</p>
-                <p class="minimal__subTitle">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                </p>
-              </div>
-              <div class="container--price">
-                <p class="price">$425</p>
-                <p class="price priceText">/night</p>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <img class="imgSlideRoom" src="./images/5.webp" alt="habitacion hotel" />
-            <div class="minimal">
-              <div class="divDesktop">
-
-                <p class="minimal__title">Suite Room</p>
-                <p class="minimal__subTitle">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                </p>
-              </div>
-              <div class="container--price">
-                <p class="price">$399</p>
-                <p class="price priceText">/night</p>
-              </div>
-            </div>
-          </div>
+          @endforeach
         </div>
         <!-- If we need pagination -->
         <div class="swiper-pagination"></div>
@@ -382,25 +320,25 @@
           </div>
           <div class="swiper-slide ">
             <article class="elementMenu">
-              <img class="elementMenu__img" src="./images/eggs.webp" alt="habitacion hotel" />
+              <img class="elementMenu__img" src="./images/fruit.webp" alt="habitacion hotel" />
               <div class="elementMenu__text">
-                <p class="elementMenu__text__title">Eggs & Bacon</p>
+                <p class="elementMenu__text__title">Fruit Parfait</p>
                 <p class="subTitleRoboto elementMenu__text__subTitle ">
                   Lorem ipsum dolor sit amet, consectetur adip isicing elit, sed do eiusmod tempor.
                 </p>
             </article>
             <article class="elementMenu">
-              <img class="elementMenu__img" src="./images/coffe.webp" alt="habitacion hotel" />
+              <img class="elementMenu__img" src="./images/mermelada.webp" alt="habitacion hotel" />
               <div class="elementMenu__text">
-                <p class="elementMenu__text__title">Tea or Coffe</p>
+                <p class="elementMenu__text__title">Marmalade Selection</p>
                 <p class="elementMenu__text__subTitle subTitleRoboto">
                   Lorem ipsum dolor sit amet, consectetur adip isicing elit, sed do eiusmod tempor.
                 </p>
             </article>
             <article class="elementMenu">
-              <img class="elementMenu__img" src="./images/chia.webp" alt="habitacion hotel" />
+              <img class="elementMenu__img" src="./images/cheese.webp" alt="habitacion hotel" />
               <div class="elementMenu__text">
-                <p class="elementMenu__text__title">Chia Oatmeal</p>
+                <p class="elementMenu__text__title">Cheese Plate</p>
                 <p class="elementMenu__text__subTitle subTitleRoboto">
                   Lorem ipsum dolor sit amet, consectetur adip isicing elit, sed do eiusmod tempor.
                 </p>
@@ -433,26 +371,26 @@
             </article>
           </div>
           <div class="swiper-slide ">
-            <article class="elementMenu">
-              <img class="elementMenu__img" src="./images/eggs.webp" alt="habitacion hotel" />
+          <article class="elementMenu">
+              <img class="elementMenu__img" src="./images/fruit.webp" alt="habitacion hotel" />
               <div class="elementMenu__text">
-                <p class="elementMenu__text__title">Eggs & Bacon</p>
+                <p class="elementMenu__text__title">Fruit Parfait</p>
                 <p class="subTitleRoboto elementMenu__text__subTitle ">
                   Lorem ipsum dolor sit amet, consectetur adip isicing elit, sed do eiusmod tempor.
                 </p>
             </article>
             <article class="elementMenu">
-              <img class="elementMenu__img" src="./images/coffe.webp" alt="habitacion hotel" />
+              <img class="elementMenu__img" src="./images/mermelada.webp" alt="habitacion hotel" />
               <div class="elementMenu__text">
-                <p class="elementMenu__text__title">Tea or Coffe</p>
+                <p class="elementMenu__text__title">Marmalade Selection</p>
                 <p class="elementMenu__text__subTitle subTitleRoboto">
                   Lorem ipsum dolor sit amet, consectetur adip isicing elit, sed do eiusmod tempor.
                 </p>
             </article>
             <article class="elementMenu">
-              <img class="elementMenu__img" src="./images/chia.webp" alt="habitacion hotel" />
+              <img class="elementMenu__img" src="./images/cheese.webp" alt="habitacion hotel" />
               <div class="elementMenu__text">
-                <p class="elementMenu__text__title">Chia Oatmeal</p>
+                <p class="elementMenu__text__title">Cheese Plate</p>
                 <p class="elementMenu__text__subTitle subTitleRoboto">
                   Lorem ipsum dolor sit amet, consectetur adip isicing elit, sed do eiusmod tempor.
                 </p>
