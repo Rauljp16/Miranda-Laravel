@@ -29,4 +29,9 @@ class Rooms extends Model
         return $this->BelongsToMany(Images::class, 'rooms_images', 'room_id', 'image_id');
     }
 
+    public function bookings()
+    {
+        return $this->hasMany(Booking::class);
+    }
+
 }

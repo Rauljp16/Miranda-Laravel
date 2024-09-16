@@ -10,14 +10,10 @@ Route::middleware("auth")->group(function(){
     Route::resource("activities", ActivityController::class);
     Route::get('/activities/{activity}/edit', [ActivityController::class, 'edit'])->name('activities.edit');
     Route::put('/activities/{activity}', [ActivityController::class, 'update'])->name('activities.update');
-    
+
 });
 
-// Route::get('/', function(){
-//     return view('home');
-// });
 Route::get('/', [RoomsController::class, 'home']);
-
 
 Route::get('/about', function(){
     return view('about');
@@ -25,9 +21,7 @@ Route::get('/about', function(){
 
 Route::get('/rooms', [RoomsController::class, 'index']);
 
-Route::get('/offers', function(){
-    return view('offers');
-});
+Route::get('/offers', [RoomsController::class, 'offers']);
 
 Route::get('/roomDetails/{id}', [RoomsController::class, 'show'])->name('roomDetails');
 

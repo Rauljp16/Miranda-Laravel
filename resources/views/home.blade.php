@@ -63,18 +63,19 @@
   </section>
 
   <section class="date">
-    <form class="date__form">
+    <form class="date__form" action="{{ route('check.availability') }}" method="GET">
+        @csrf
       <div class="date__form__div">
         <label class="date__form__div__label">Arrival Date</label>
         <img src="./svg/calendar.svg" class="calendarArrival" alt="account" />
-        <input class="date__form__div__input" type="date" />
+        <input class="date__form__div__input" type="date" name="checkIn" required />
       </div>
       <div class="date__form__div">
         <label class="date__form__div__label">Departure Date</label>
         <img src="./svg/calendar.svg" class="calendarDeparture" alt="account" />
-        <input class="date__form__div__input" type="date" />
+        <input class="date__form__div__input" type="date" name="checkOut" required/>
       </div>
-      <button disabled>CHECK AVAILABILITY</button>
+      <button type="submit">CHECK AVAILABILITY</button>
     </form>
   </section>
   <section class="aboutUsHome">
@@ -545,7 +546,7 @@
   <script src="{{ asset('assets/js/script.js') }}"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="{{ asset('assets/js/swiper.js') }}"></script>
-  
+
 </body>
 
 </html>
