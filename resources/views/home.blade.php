@@ -63,8 +63,9 @@
   </section>
 
   <section class="date">
-    <form class="date__form" action="{{ route('check.availability') }}" method="GET">
+    <form class="date__form" action="{{ route('rooms.roomsAvailable') }}" method="GET">
         @csrf
+        @method('GET')
       <div class="date__form__div">
         <label class="date__form__div__label">Arrival Date</label>
         <img src="./svg/calendar.svg" class="calendarArrival" alt="account" />
@@ -88,8 +89,8 @@
         minim veniam, quis nostrud exercitation ullamco laboris nisi ut
         aliquip ex ea commodo consequat.
       </p>
-      <button>BOOK NOW</button>
-    </article>
+      <button type="button" onclick="window.location.href='{{ url('/about') }}'">BOOK NOW</button>
+      </article>
     <div class="containerTeamLuxury">
       <article class="team">
         <div>

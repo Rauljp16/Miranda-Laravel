@@ -2224,6 +2224,14 @@ footer .copyright__container p {
     font-size: 14px;
     width: 20px;
 }
+.containerInfoDetails .CheckAvailability__user {
+    position: absolute;
+    right: 16px;
+    bottom: 0px;
+    pointer-events: none;
+    font-size: 14px;
+    width: 22px;
+}
 .containerInfoDetails .CheckAvailability button {
     background-color: rgb(190, 173, 142);
     border: none;

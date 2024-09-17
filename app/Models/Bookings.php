@@ -3,12 +3,19 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongTo;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
-class Booking extends Model
+
+
+class Bookings extends Model
 {
+    use HasFactory;
+
+    protected $fillable = ['checkIn', 'checkOut', 'name', 'room_id'];
 
     public function room()
     {
-        return $this->belongsTo(Room::class);
+        return $this->belongsTo(Rooms::class, 'room_id');
     }
 }

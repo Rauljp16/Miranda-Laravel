@@ -146,7 +146,7 @@
               </div>
             </div>
           </div>
-          <button class="descriptionOffer__button">BOOK NOW</button>
+          <button onclick="window.location.href='{{ route('roomDetails', $room->id) }}'" class="descriptionOffer__button">BOOK NOW</button>
         </article>
       </article>
       @endforeach
@@ -183,7 +183,7 @@
                 </p>
                 <div class="minimal__divPrice">
                   <p class="minimal__divPrice__price">$345/Night</p>
-                  <a class="minimal__divPrice__booking" href="http://127.0.0.7:5500/room_details.html"
+                  <a class="minimal__divPrice__booking" href="{{ route('roomDetails', $room->id) }}"
                     onclick="toggleMenu()">Booking Now</a>
                 </div>
               </div>

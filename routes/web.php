@@ -13,17 +13,21 @@ Route::middleware("auth")->group(function(){
 
 });
 
-Route::get('/', [RoomsController::class, 'home']);
+Route::get('/', [RoomsController::class, 'home'])->name('home');
 
 Route::get('/about', function(){
     return view('about');
 });
 
-Route::get('/rooms', [RoomsController::class, 'index']);
-
-Route::get('/offers', [RoomsController::class, 'offers']);
+Route::get('/rooms', [RoomsController::class, 'index'])->name('rooms');
 
 Route::get('/roomDetails/{id}', [RoomsController::class, 'show'])->name('roomDetails');
+
+Route::get('/roomsAvailable', [RoomsController::class, 'availability'])->name('rooms.roomsAvailable');
+
+Route::post('/roomDetails/booking', [RoomsController::class, 'storeBooking'])->name('room.storeBooking');
+
+Route::get('/offers', [RoomsController::class, 'offers']);
 
 Route::get('/contact', function(){
     return view('contact');

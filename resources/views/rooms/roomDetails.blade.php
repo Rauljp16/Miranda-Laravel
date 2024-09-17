@@ -79,16 +79,21 @@
         </div>
         <img class="infoDetails__img" src="{{  $room->images->first()->image_url }}" alt="habitacion hotel" />
       </section>
-      <section class="CheckAvailability">
+      <form action="{{ route('room.storeBooking') }}" method="POST" class="CheckAvailability">
+      @csrf
+        <input type="hidden" name="room_id" value="{{ $room->id }}">
         <h3 class="CheckAvailability__title">Check Availability</h3>
         <label>Check In</label>
         <img src="../svg/calendar.svg" class="CheckAvailability__checkIn" alt="account" />
-        <input type="date" />
+        <input type="date" name="checkIn" required/>
         <label>Check Out</label>
         <img src="../svg/calendar.svg" class="CheckAvailability__checkOut" alt="account" />
-        <input type="date" />
-        <button>CHECK AVAILABILITY</button>
-      </section>
+        <input type="date" name="checkOut" required/>
+        <label>Full Name</label>
+        <img src="../svg/user.svg" class="CheckAvailability__user" alt="account" />
+        <input type="text" placeholder="Full Name" name="name" required/>
+        <button type="submit">CHECK AVAILABILITY</button>
+      </form>
     </div>
     <div class="textInfoRoom">
       <p class="textInfoRoom__info">
