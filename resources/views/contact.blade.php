@@ -14,6 +14,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap"
     rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <style>
+        #map {
+            height: 400px; /* Ajusta la altura según lo necesites */
+            width: 100%; /* Asegúrate de que el mapa ocupe todo el ancho del div */
+        }
+    </style>
   <title>Hotel Miranda</title>
 </head>
 
@@ -100,37 +107,56 @@
       </article>
     </div>
     <div class="contactPage__divImg">
-      <img class="contactPage__divImg__imgMap" src="./images/map.webp" alt="maps address" />
+
+    <div id="map"></div>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script>
+        // Inicializar el mapa
+        var map = L.map('map').setView([18.333861, -68.809556], 9); // Coordenadas del hotel
+
+        // Agregar una capa de mapa de satélite
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: 'Map data © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        // Agregar un marcador
+        L.marker([18.333861, -68.809556]).addTo(map)
+            .bindPopup('Miranda Hotel Resorts Bayahibe')
+            .openPopup();
+    </script>
+
+      <!-- <img class="contactPage__divImg__imgMap" src="./images/map.webp" alt="maps address" /> -->
     </div>
-    <section class="formContact">
+    <form action="{{ route('messages.store') }}" class="formContact" method="POST">
+    @csrf
       <div class="formContact__containerInput">
         <div class="formContact__containerInput__two">
           <div class="formContact__containerInput__two__div">
             <img class="formContact__containerInput__two__div__svg" src="./svg/contactPage/user.svg" alt="user" />
-            <input class="formContact__containerInput__two__div__text" input="input" placeholder="Your full name">
+            <input class="formContact__containerInput__two__div__text" type="text" name="name" required placeholder="Your full name">
           </div>
           <div class="formContact__containerInput__two__div">
             <img class="formContact__containerInput__two__div__svg" src="./svg/contactPage/phone.svg" alt="phone" />
-            <input class="formContact__containerInput__two__div__number" input="input" placeholder="Add phone number">
+            <input class="formContact__containerInput__two__div__number" type="text" name="phone" required placeholder="Add phone number">
           </div>
         </div>
         <div class="formContact__containerInput__two">
           <div class="formContact__containerInput__two__div">
             <img class="formContact__containerInput__two__div__svg" src="./svg/contactPage/email.svg" alt="email" />
-            <input class="formContact__containerInput__two__div__email" input="input" placeholder="Enter email address">
+            <input class="formContact__containerInput__two__div__email" type="email" name="email" required placeholder="Enter email address">
           </div>
           <div class="formContact__containerInput__two__div">
             <img class="formContact__containerInput__two__div__svg" src="./svg/contactPage/subject.svg" alt="subject" />
-            <input class="formContact__containerInput__two__div__text" input="input" placeholder="Enter subject">
+            <input class="formContact__containerInput__two__div__text" type="text" name="subject" required placeholder="Enter subject">
           </div>
         </div>
       </div>
       <div class="formContact__div">
         <img class="formContact__div__svg" src="./svg/contactPage/message.svg" alt="message" />
-        <textarea class="formContact__div__text message" placeholder="Enter message"></textarea>
+        <textarea class="formContact__div__text message" placeholder="Enter message" name="message" required></textarea>
       </div>
-      <button class="buttonFormContact">SEND</button>
-    </section>
+      <button type="submit" class="buttonFormContact">SEND</button>
+    </form>
   </section>
   <footer>
     <div class="containerFooter">
@@ -220,7 +246,7 @@
       </section>
     </div>
   </footer>
-  
+
   <script src="{{ asset('assets/js/script.js') }}"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="{{ asset('assets/js/swiper.js') }}"></script>

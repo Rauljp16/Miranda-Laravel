@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ActivityController;
 use App\Http\Controllers\RoomsController;
+use App\Http\Controllers\MessageController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -33,6 +34,7 @@ Route::get('/contact', function(){
     return view('contact');
 });
 
+Route::post('/contact', [MessageController::class, 'store'])->name('messages.store');
 
 
 
