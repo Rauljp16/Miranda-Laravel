@@ -16,6 +16,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+
   <title>Hotel Miranda</title>
 </head>
 
@@ -88,7 +89,7 @@
           </p>
           <div class="roomcard__minimal__divPrice">
             <p class="roomcard__minimal__divPrice__price">${{$room->OfferPrice}}/Night</p>
-            <a class="roomcard__minimal__divPrice__booking" href="{{ route('roomDetails', $room->id) }}" onclick="toggleMenu()">Booking Now</a> 
+            <a class="roomcard__minimal__divPrice__booking" href="{{ route('roomDetails', $room->id) }}" onclick="toggleMenu()">Booking Now</a>
           </div>
         </div>
       </article>

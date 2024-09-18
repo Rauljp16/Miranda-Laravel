@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
   <link rel="stylesheet" href="{{ asset('assets/css/styles.css') }}">
   <!-- <link rel="stylesheet" href="styles.css" /> -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
@@ -14,6 +15,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap"
     rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
   <title>Hotel Miranda</title>
 </head>
 
@@ -62,7 +64,33 @@
     </div>
   </section>
 
+            <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        @if (session('error'))
+            Toastify({
+                className:"toastError",
+                text: "{{ session('error') }}",
+                duration: 3000, // Duración de la notificación
+                gravity: "top", // Posición de la notificación (top o bottom)
+                // style: {
+                // background: "rgba(255, 255, 255)",
+                // boxShadow: "0px 0px 15px 1px rgba(253, 0, 0, 0.295)",
+                // color: "rgb(51, 51, 51)",
+                // borderRadius: "3px",
+                // fontSize: "20px",
+                // padding: "30px 20px 30px 20px",
+                // backdropFilter: "blur(10px)",
+                // WebkitBackdropFilter: "blur(10px)"
+                //         },
+                offset: {
+                y: 150
+                        },
+            }).showToast();
+        @endif
+    });
+    </script>
   <section class="date">
+
     <form class="date__form" action="{{ route('rooms.roomsAvailable') }}" method="GET">
         @csrf
         @method('GET')
@@ -547,6 +575,7 @@
   <script src="{{ asset('assets/js/script.js') }}"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="{{ asset('assets/js/swiper.js') }}"></script>
+  <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 
 </body>
 

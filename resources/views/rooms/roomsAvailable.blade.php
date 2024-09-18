@@ -69,9 +69,6 @@
   </section>
   <section class="roomsPage">
     <div class="CardContainer">
-    @if($rooms->isEmpty())
-            <h1>No hay habitaciones disponibles para las fechas seleccionadas.</h1>
-        @else
       @foreach($rooms as $room)
       <article class="roomcard">
         <img class="roomcard__img" src="{{  $room->images->first()->image_url }}" alt="habitacion hotel" />
@@ -97,7 +94,6 @@
         </div>
       </article>
       @endforeach
-      @endif
     </div>
     </section>
 

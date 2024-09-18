@@ -51,6 +51,10 @@ public function availability(Request $request)
     $roomIds = $bookings->pluck('room_id')->unique();
     $rooms = Rooms::whereNotIn('id', $roomIds)->get();
 
+    if ($rooms->isEmpty()) {
+        return redirect()->back()->with('error', 'No hay habitaciones disponibles para las fechas seleccionadas.');
+    }
+
     return view('rooms.roomsAvailable', ['rooms' => $rooms]);
 }
 
