@@ -1237,6 +1237,7 @@ footer .copyright__container p {
         flex-direction: row-reverse;
         margin: 110px 0 0 0;
         padding: 90px 0 90px 10%;
+        background-color: aquamarine;
     }
     .aboutUsHome .containerTeamLuxury {
         position: relative;
