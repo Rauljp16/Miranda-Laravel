@@ -56,16 +56,17 @@
                 text: "{{ session('error') }}",
                 duration: 3000, // Duración de la notificación
                 gravity: "top", // Posición de la notificación (top o bottom)
-                // style: {
-                // background: "rgba(255, 255, 255)",
-                // boxShadow: "0px 0px 15px 1px rgba(253, 0, 0, 0.295)",
-                // color: "rgb(51, 51, 51)",
-                // borderRadius: "3px",
-                // fontSize: "20px",
-                // padding: "30px 20px 30px 20px",
-                // backdropFilter: "blur(10px)",
-                // WebkitBackdropFilter: "blur(10px)"
-                //         },
+                offset: {
+                y: 150
+                        },
+            }).showToast();
+        @endif
+        @if (session('success'))
+            Toastify({
+                className:"toastSuccess",
+                text: "{{ session('success') }}",
+                duration: 3000, // Duración de la notificación
+                gravity: "top", // Posición de la notificación (top o bottom)
                 offset: {
                 y: 150
                         },
