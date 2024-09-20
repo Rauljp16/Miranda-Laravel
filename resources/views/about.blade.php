@@ -35,23 +35,23 @@
   <section class="iconInfo">
     <div class="iconInfo__container">
       <div class="iconInfo__container__item">
-        <img class="iconContainer__svg" src="./svg/breakfast.svg" alt="breakfast icon" />
+        <img class="iconContainer__svg svgColor" src="./svg/breakfast.svg" alt="breakfast icon" />
         <p>BREAKFAST</p>
       </div>
       <div class="iconInfo__container__item container--airport">
-        <img class="iconContainer__svg" src="./svg/airport.svg" alt="breakfast icon" />
+        <img class="iconContainer__svg svgColor" src="./svg/airport.svg" alt="breakfast icon" />
         <p>AIRPORT PICKUP</p>
       </div>
       <div class="iconInfo__container__item">
-        <img class="iconContainer__svg" src="./svg/cityGuide.svg" alt="breakfast icon" />
+        <img class="iconContainer__svg svgColor" src="./svg/cityGuide.svg" alt="breakfast icon" />
         <p>CITY GUIDE</p>
       </div>
       <div class="iconInfo__container__item item--bbq">
-        <img class="iconContainer__svg" src="./svg/bbq.svg" alt="breakfast icon" />
+        <img class="iconContainer__svg svgColor" src="./svg/bbq.svg" alt="breakfast icon" />
         <p>BBQ PARTY</p>
       </div>
       <div class="iconInfo__container__item ">
-        <img class="iconContainer__svg" src="./svg/luxuryRoom.svg" alt="breakfast icon" />
+        <img class="iconContainer__svg svgColor" src="./svg/luxuryRoom.svg" alt="breakfast icon" />
         <p>LUXURY ROOM</p>
       </div>
     </div>

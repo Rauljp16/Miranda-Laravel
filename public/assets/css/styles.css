@@ -1237,7 +1237,7 @@ footer .copyright__container p {
         flex-direction: row-reverse;
         margin: 110px 0 0 0;
         padding: 90px 0 90px 10%;
-        background-color: aquamarine;
+        background-color: rgb(255, 255, 255);
     }
     .aboutUsHome .containerTeamLuxury {
         position: relative;
@@ -1657,19 +1657,24 @@ footer .copyright__container p {
 }
 .iconInfo__container__item {
     display: flex;
+    width: 157px;
+    height: 157px;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 20px 0;
+    background-color: rgba(255, 255, 255, 0.185);
 }
 .iconInfo__container .item--bbq {
     display: none;
 }
-.iconInfo .container--airport {
+/* .iconInfo .container--airport {
     background-color: rgb(190, 173, 142);
     color: rgb(255, 255, 255);
+} */
+.svgColor {
+    background-color: rgb(186, 221, 177);
 }
-
 @media only screen and (min-width: 1000px) {
     .iconInfo {
         margin: 10px 0 70px;
@@ -1680,11 +1685,15 @@ footer .copyright__container p {
         margin: 0 auto;
         justify-content: space-between;
     }
+    .iconInfo__container__item {
+        width: 200px;
+        height: 200px;
+    }
     .iconInfo .item--bbq {
         display: block;
         display: flex;
-        width: 158px;
-        height: 158px;
+        width: 200px;
+        height: 200px;
     }
 }
 .textArchivo {

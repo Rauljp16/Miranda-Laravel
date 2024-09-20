@@ -70,7 +70,6 @@
             .openPopup();
     </script>
 
-      <!-- <img class="contactPage__divImg__imgMap" src="./images/map.webp" alt="maps address" /> -->
     </div>
     <form action="{{ route('messages.store') }}" class="formContact" method="POST">
     @csrf

@@ -9,8 +9,8 @@
     <div class="info">
       <p class="info__subTitle">THE ULTIMATE LUXURY EXPERIENCE</p>
       <p class="info__title">The Perfect Base For You</p>
-      <button class="info__take">TAKE A TOUR</button>
-      <button class="info__learn">LEARN MORE</button>
+      <button onclick="scrollToTour()" class="info__take">TAKE A TOUR</button>
+      <button onclick="scrollToLearn()" class="info__learn">LEARN MORE</button>
     </div>
   </section>
 
@@ -119,7 +119,7 @@
       </div>
     </article>
   </section>
-  <section class="videoHome ">
+  <section id="videoHome" class="videoHome ">
     <div class="videoHome__containerVideoHome">
       <div class="videoHome--info">
         <p class="videoHome__containerVideoHome__subTitle">INTRO VIDEO</p>
@@ -137,12 +137,12 @@
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerpolicy=" strict-origin-when-cross-origin" allowfullscreen"></iframe>
         </div>
-        <button>BOOK NOW</button>
+        <button button type="button" onclick="window.location.href='{{ url('/about') }}'">BOOK NOW</button>
       </div>
     </div>
     <div class="divGold"></div>
   </section>
-  <section class=" facilitiesHome">
+  <section id="facilitiesHome" class=" facilitiesHome">
     <article class="slider">
       <p class="subTitle subTitle--noButton">FACILITIES</p>
       <p class="title">Core Features</p>
