@@ -234,7 +234,7 @@
       </div>
     </article>
   </section>
-  <section class="menuFoodHome">
+  <section class="menuFoodHome" id="menuFoodHome">
     <div class="menuFoodHome__iconSvg">
       <img class="menuFoodHome__iconSvg__svg" src="./svg/food.svg" alt="food svg" />
     </div>

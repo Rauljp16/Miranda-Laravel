@@ -16,6 +16,7 @@
         #map {
             height: 400px; /* Ajusta la altura según lo necesites */
             width: 100%; /* Asegúrate de que el mapa ocupe todo el ancho del div */
+            z-index: 1;
         }
     </style>
     <title>@yield('title', 'Hotel Miranda')</title>

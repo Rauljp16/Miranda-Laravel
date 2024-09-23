@@ -31,17 +31,17 @@
       </section>
       <form action="{{ route('room.storeBooking') }}" method="POST" class="CheckAvailability">
       @csrf
-        <input type="hidden" name="room_id" value="{{ $room->id }}">
+        <input class="inputRoomDetails" type="hidden" name="room_id" value="{{ $room->id }}">
         <h3 class="CheckAvailability__title">Check Availability</h3>
         <label>Check In</label>
         <img src="../svg/calendar.svg" class="CheckAvailability__checkIn" alt="account" />
-        <input type="date" name="checkIn" required/>
+        <input class="inputRoomDetails" type="date" name="checkIn" required/>
         <label>Check Out</label>
         <img src="../svg/calendar.svg" class="CheckAvailability__checkOut" alt="account" />
-        <input type="date" name="checkOut" required/>
+        <input class="inputRoomDetails" type="date" name="checkOut" required/>
         <label>Full Name</label>
         <img src="../svg/user.svg" class="CheckAvailability__user" alt="account" />
-        <input type="text" placeholder="Full Name" name="name" required/>
+        <input class="inputRoomDetails" type="text" placeholder="Full Name" name="name" required/>
         <button type="submit">CHECK AVAILABILITY</button>
       </form>
     </div>
@@ -186,8 +186,7 @@
                   </p>
                   <div class="minimal__divPrice">
                     <p class="minimal__divPrice__price">$80/Night</p>
-                    <a class="minimal__divPrice__booking" href="http://127.0.0.7:5500/room_details.html"
-                      onclick="toggleMenu()">Booking Now</a>
+                    <a class="minimal__divPrice__booking" href="{{ route('roomDetails', 9) }}" onclick="toggleMenu()">Booking Now</a>
                   </div>
                 </div>
               </div>
@@ -210,8 +209,7 @@
                   </p>
                   <div class="minimal__divPrice">
                     <p class="minimal__divPrice__price">$120/Night</p>
-                    <a class="minimal__divPrice__booking" href="http://127.0.0.7:5500/room_details.html"
-                      onclick="toggleMenu()">Booking Now</a>
+                    <a class="minimal__divPrice__booking" href="{{ route('roomDetails', 3) }}" onclick="toggleMenu()">Booking Now</a>
                   </div>
                 </div>
               </div>

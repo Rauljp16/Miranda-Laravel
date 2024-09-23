@@ -1656,26 +1656,39 @@ footer .copyright__container p {
     max-width: 500px;
 }
 .iconInfo__container__item {
-    display: flex;
     width: 157px;
     height: 157px;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 20px 0;
-    background-color: rgba(255, 255, 255, 0.185);
 }
 .iconInfo__container .item--bbq {
     display: none;
 }
-/* .iconInfo .container--airport {
-    background-color: rgb(190, 173, 142);
-    color: rgb(255, 255, 255);
-} */
 .svgColor {
-    background-color: rgb(186, 221, 177);
+    background-color: transparent;
+    width: 53px;
+    height: 53px;
+}
+.iconInfo__container__item:hover {
+    background-color: #bead8e;
+}
+.svgContainerAbout {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.svgContainerAbout:hover {
+    filter: contrast(10);
 }
 @media only screen and (min-width: 1000px) {
+    .svgColor {
+        width: 66px;
+        height: 66px;
+    }
+
     .iconInfo {
         margin: 10px 0 70px;
     }
@@ -1694,6 +1707,9 @@ footer .copyright__container p {
         display: flex;
         width: 200px;
         height: 200px;
+    }
+    .containerInfoDetails .CheckAvailability {
+        height: 335px;
     }
 }
 .textArchivo {
@@ -2216,7 +2232,6 @@ footer .copyright__container p {
     font-weight: 700;
     line-height: 15.23px;
     width: 100%;
-    height: 335px;
 }
 .containerInfoDetails .CheckAvailability h3 {
     text-align: center;
@@ -2228,9 +2243,10 @@ footer .copyright__container p {
     line-height: 16px;
     width: 100%;
 }
-.containerInfoDetails .CheckAvailability input {
+.inputRoomDetails {
     display: flex;
     width: 100%;
+    height: 60px;
     background-color: rgb(248, 248, 248);
     border: none;
     border-bottom: 2px solid rgb(190, 173, 142);
@@ -2254,7 +2270,7 @@ footer .copyright__container p {
 .containerInfoDetails .CheckAvailability__checkIn {
     position: absolute;
     right: 16px;
-    top: 96px;
+    top: 100px;
     pointer-events: none;
     font-size: 14px;
     width: 20px;
@@ -2262,7 +2278,7 @@ footer .copyright__container p {
 .containerInfoDetails .CheckAvailability__checkOut {
     position: absolute;
     right: 16px;
-    bottom: 110px;
+    bottom: 230px;
     pointer-events: none;
     font-size: 14px;
     width: 20px;
@@ -2270,7 +2286,7 @@ footer .copyright__container p {
 .containerInfoDetails .CheckAvailability__user {
     position: absolute;
     right: 16px;
-    bottom: 0px;
+    bottom: 113px;
     pointer-events: none;
     font-size: 14px;
     width: 22px;
@@ -2498,6 +2514,15 @@ footer .copyright__container p {
     }
     .relatedRooms .roomsHome {
         max-width: 770px;
+    }
+    .containerInfoDetails .CheckAvailability__user {
+        bottom: -23px;
+    }
+    .containerInfoDetails .CheckAvailability__checkOut {
+        bottom: 97px;
+    }
+    .containerInfoDetails .CheckAvailability__checkIn {
+        top: 100px;
     }
 }
 .slider {

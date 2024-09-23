@@ -35,24 +35,34 @@
   <section class="iconInfo">
     <div class="iconInfo__container">
       <div class="iconInfo__container__item">
+        <div class="svgContainerAbout">
         <img class="iconContainer__svg svgColor" src="./svg/breakfast.svg" alt="breakfast icon" />
         <p>BREAKFAST</p>
+        </div>
       </div>
       <div class="iconInfo__container__item container--airport">
+      <div class="svgContainerAbout">
         <img class="iconContainer__svg svgColor" src="./svg/airport.svg" alt="breakfast icon" />
         <p>AIRPORT PICKUP</p>
+        </div>
       </div>
       <div class="iconInfo__container__item">
+      <div class="svgContainerAbout">
         <img class="iconContainer__svg svgColor" src="./svg/cityGuide.svg" alt="breakfast icon" />
         <p>CITY GUIDE</p>
+        </div>
       </div>
       <div class="iconInfo__container__item item--bbq">
+      <div class="svgContainerAbout">
         <img class="iconContainer__svg svgColor" src="./svg/bbq.svg" alt="breakfast icon" />
         <p>BBQ PARTY</p>
+        </div>
       </div>
       <div class="iconInfo__container__item ">
+      <div class="svgContainerAbout">
         <img class="iconContainer__svg svgColor" src="./svg/luxuryRoom.svg" alt="breakfast icon" />
         <p>LUXURY ROOM</p>
+        </div>
       </div>
     </div>
   </section>
@@ -71,7 +81,7 @@
           eiusmod tem
           por incididunt ut labore et dolore
           magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
-        <button class="facilitiesRestaurant__container__text__button">TAKE A TOUR</button>
+        <button class="facilitiesRestaurant__container__text__button" onclick="window.location.href='{{ url('/#menuFoodHome') }}'">TAKE A TOUR</button>
       </div>
     </div>
   </section>
