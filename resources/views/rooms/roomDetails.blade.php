@@ -34,14 +34,14 @@
         <input class="inputRoomDetails" type="hidden" name="room_id" value="{{ $room->id }}">
         <h3 class="CheckAvailability__title">Check Availability</h3>
         <div class="inputContainer--RoomDetails">
-        <label>Check In</label>
-        <img src="../svg/calendar.svg" class="CheckAvailability__checkIn" alt="account" />
-        <input class="inputRoomDetails" type="date" name="checkIn" required/>
+            <label>Check In</label>
+            <img src="../svg/calendar.svg" class="CheckAvailability__checkIn" alt="account" />
+            <input class="inputRoomDetails" type="date" name="checkIn" required/>
         </div>
         <div class="inputContainer--RoomDetails">
-        <label>Check Out</label>
-        <img src="../svg/calendar.svg" class="CheckAvailability__checkOut" alt="account" />
-        <input class="inputRoomDetails" type="date" name="checkOut" required/>
+            <label>Check Out</label>
+            <img src="../svg/calendar.svg" class="CheckAvailability__checkOut" alt="account" />
+            <input class="inputRoomDetails" type="date" name="checkOut" required/>
         </div>
         <label>Full Name</label>
         <img src="../svg/user.svg" class="CheckAvailability__user" alt="account" />
