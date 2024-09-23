@@ -2169,6 +2169,7 @@ footer .copyright__container p {
 }
 
 .containerInfoDetails {
+    width: 100%;
     display: flex;
     flex-direction: column;
     max-width: 500px;
@@ -2472,6 +2473,7 @@ footer .copyright__container p {
         flex-direction: row;
         gap: 60px;
         max-width: 1138px;
+        width: 100%;
     }
     .containerInfoDetails .infoDetails__subTitle {
         padding-left: 20px;
