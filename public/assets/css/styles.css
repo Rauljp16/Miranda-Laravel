@@ -2233,7 +2233,6 @@ footer .copyright__container p {
     font-family: "Archivo", sans-serif;
     font-weight: 700;
     line-height: 15.23px;
-    background-color: rgb(231, 33, 198);
 }
 .containerInfoDetails .CheckAvailability h3 {
     text-align: center;
@@ -2255,9 +2254,9 @@ footer .copyright__container p {
 .inputRoomDetails {
     position: relative;
     display: flex;
-    width: 100%;
+    width: 300px;
     height: 60px;
-    background-color: rgb(0, 217, 255);
+    background-color: #f8f8f8;
     border: none;
     border-bottom: 2px solid rgb(190, 173, 142);
     /* padding: 16px 32px 16px 16px; */
