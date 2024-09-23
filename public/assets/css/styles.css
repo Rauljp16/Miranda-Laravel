@@ -2256,7 +2256,7 @@ footer .copyright__container p {
     display: flex;
     width: 100%;
     height: 60px;
-    background-color: rgba(243, 15, 243, 0.267);
+    background-color: rgba(61, 243, 15, 0.267);
     border: none;
     border-bottom: 2px solid rgb(190, 173, 142);
     padding: 16px 32px 16px 16px;
@@ -2268,14 +2268,15 @@ footer .copyright__container p {
     font-size: 14px;
     font-weight: 400;
 }
-/* .containerInfoDetails .CheckAvailability ::-webkit-calendar-picker-indicator {
+.containerInfoDetails .CheckAvailability ::-webkit-calendar-picker-indicator {
     position: absolute;
     left: 0;
     cursor: pointer;
     width: 88%;
     margin-left: 15px;
     opacity: 0;
-} */
+    background-color: blue;
+}
 .containerInfoDetails .CheckAvailability__checkIn {
     position: absolute;
     right: 16px;
