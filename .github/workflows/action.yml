@@ -10,6 +10,7 @@ jobs:
         with:
           host: ${{ secrets.EC2_HOST }}
           username: ${{ secrets.USERNAME }}
+          password:
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
             cd /var/www/Miranda-Laravel
