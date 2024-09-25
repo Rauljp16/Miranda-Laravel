@@ -1,20 +1,30 @@
-name: remote ssh command
-on: [push]
+name: Deploy Laravel to EC2
+
+on:
+  push:
+    branches:
+      - main
+
 jobs:
-  build:
-    name: Build
+  deploy:
     runs-on: ubuntu-latest
+
     steps:
-      - name: executing remote ssh commands using password
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Deploy to EC2
         uses: appleboy/ssh-action@v1.0.3
         with:
           host: ${{ secrets.EC2_HOST }}
           username: ${{ secrets.EC2_USERNAME }}
-          password:
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
             cd /var/www/Miranda-Laravel
             git pull origin main
             composer install
             artisan migrate
-            systemctl restart apache2
+            artisan config:cache
+            artisan route:cache
+            artisan view:cache
+            sudo systemctl restart apache2
