@@ -8,10 +8,9 @@ jobs:
       - name: executing remote ssh commands using password
         uses: appleboy/ssh-action@v1.0.3
         with:
-          host: ${{ secrets.HOST }}
+          host: ${{ secrets.EC2_HOST }}
           username: ${{ secrets.USERNAME }}
-          password: ${{ secrets.PASSWORD }}
-          port: ${{ secrets.PORT }}
+          key: ${{ secrets.EC2_SSH_KEY }}
           script: |
             cd /var/www/Miranda-Laravel
             git pull origin main
