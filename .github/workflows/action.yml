@@ -21,7 +21,7 @@ jobs:
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
             cd /var/www/Miranda-Laravel
-            git pull origin main
+            git pull
             composer install
             artisan migrate
             artisan config:cache
