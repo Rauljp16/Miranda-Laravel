@@ -32,7 +32,7 @@
       <form action="{{ route('room.storeBooking') }}" method="POST" class="CheckAvailability">
       @csrf
         <input class="inputRoomDetails" type="hidden" name="room_id" value="{{ $room->id }}">
-        <h3 class="CheckAvailability__title">Book Now.</h3>
+        <h3 class="CheckAvailability__title">Book Now</h3>
         <div class="inputContainer--RoomDetails">
             <label>Check In</label>
             <img src="../svg/calendar.svg" class="CheckAvailability__checkIn" alt="account" />
