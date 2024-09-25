@@ -21,10 +21,10 @@ jobs:
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
             cd /var/www/Miranda-Laravel
-            git pull
-            composer install
-            artisan migrate
-            artisan config:cache
-            artisan route:cache
-            artisan view:cache
+            sudo -u www-data git pull origin main
+            sudo -u www-data composer install
+            sudo -u www-data php artisan migrate
+            sudo -u www-data php artisan config:cache
+            sudo -u www-data php artisan route:cache
+            sudo -u www-data php artisan view:cache
             sudo systemctl restart apache2
